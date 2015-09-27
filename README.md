@@ -1,5 +1,5 @@
 # SO-LEIC-2015
-Repositório da cadeira de SO de LEIC do primeiro semestre de 2015
+Repositório da cadeira de PO de LEIC do primeiro semestre de 2015
 
         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
