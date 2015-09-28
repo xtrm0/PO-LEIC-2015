@@ -3,7 +3,7 @@
 
 int main() {
   Cat c1 = newCat("Fonfon", 12, 3.4, 3, 3.1);
-  Cat c2 = newCat("Piloto", 1, 12.3, 2, 2.7);
+  Cat c2 = newCat("Nene", 1, 12.3, 2, 2.7);
 
   printCat(c1);
   printCat(c2);

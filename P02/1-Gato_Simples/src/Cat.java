@@ -1,47 +1,51 @@
-
+@SuppressWarnings("nls")
 public class Cat {
-	private String 	_name;
-	private	int 	_age;
-	private double 	_weight;
-	
-	public String get_name() {
-		return _name;
+	private String 	name;
+	private	int 	age;
+	private double 	weight;
+
+	public String getName() {
+		return this.name;
 	}
-	public void set_name(String _name) {
-		this._name = _name;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public int get_age() {
-		return _age;
+
+	public int getAge() {
+		return this.age;
 	}
-	public void set_age(int _age) {
-		this._age = _age;
+
+	public void setAge(int age) {
+		this.age = age;
 	}
-	public double get_weight() {
-		return _weight;
+
+	public double getWeight() {
+		return this.weight;
 	}
-	public void set_weight(double _weight) {
-		this._weight = _weight;
+
+	public void setWeight(double weight) {
+		this.weight = weight;
 	}
-	public Cat(String _name, int _age, double _weight) {
-		this._name = _name;
-		this._age = _age;
-		this._weight = _weight;
+
+	public Cat(String name, int age, double weight) {
+		this.name = name;
+		this.age = age;
+		this.weight = weight;
 	}
-	
+
+	@Override
 	public boolean equals(Object o) {
 		if (o instanceof Cat) {
 			Cat cat = (Cat) o;
-			return (_name.equals(cat._name)) && (_age == cat._age) && (_weight == cat._weight); 
+			return (this.name.equals(cat.name)) && (this.age == cat.age) && (this.weight == cat.weight);
 		}
 		return false;
 	}
-	
-	
+
+
+	@Override
 	public String toString() {
-		return _name + " (cat) (" + _age + ": " + _weight + ")";
-	}	
-	
-	
+		return this.name + " (cat) (" + this.age + ": " + this.weight + ")";
+	}
 }
-
-
