@@ -6,7 +6,7 @@
 class Cao : public Animal {
   double _peso;
 public:
-  Cao(int idade, std::string nome, double peso) : Animal(idade, nome), _peso(peso) {};
+  Cao(int idade, std::string nome, double peso);
   double getPeso();
   void setPeso(double peso);
   void ladrar();

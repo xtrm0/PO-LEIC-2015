@@ -6,7 +6,7 @@
 class Gato : public Animal {
   int _vidas;
 public:
-  Gato(int idade, std::string nome, int vidas) : Animal(idade, nome), _vidas(vidas) {};
+  Gato(int idade, std::string nome, int vidas);
   int getVidas();
   void setVidas(int vidas);
   void trepar();

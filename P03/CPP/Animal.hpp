@@ -7,7 +7,7 @@ class Animal {
   int _idade;
   std::string _nome;
 public:
-  Animal(int idade, std::string nome) : _idade(idade), _nome(nome) {};
+  Animal(int idade, std::string nome);
   int getIdade();
   void setIdade(int idade);
   std::string getNome();

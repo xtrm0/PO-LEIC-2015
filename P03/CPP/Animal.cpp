@@ -1,4 +1,5 @@
 #include "Animal.hpp"
+Animal::Animal(int idade, std::string nome) : _idade(idade), _nome(nome) {};
 int Animal::getIdade() {return _idade;}
 void Animal::setIdade(int idade) {_idade = idade;}
 std::string Animal::getNome() {return _nome;}

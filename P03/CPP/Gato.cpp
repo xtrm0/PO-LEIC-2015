@@ -1,4 +1,5 @@
 #include "Gato.hpp"
+Gato::Gato(int idade, std::string nome, int vidas) : Animal(idade, nome), _vidas(vidas) {};
 int Gato::getVidas() {return _vidas;}
 void Gato::setVidas(int vidas) {_vidas = vidas;}
 void Gato::trepar() {

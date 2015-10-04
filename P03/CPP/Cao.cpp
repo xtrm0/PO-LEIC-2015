@@ -1,4 +1,5 @@
 #include "Cao.hpp"
+Cao::Cao(int idade, std::string nome, double peso) : Animal(idade, nome), _peso(peso) {};
 double Cao::getPeso() {return _peso;}
 void Cao::setPeso(double peso) {_peso = peso;}
 void Cao::ladrar() {
