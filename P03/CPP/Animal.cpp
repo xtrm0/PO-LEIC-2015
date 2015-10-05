@@ -12,3 +12,7 @@ std::ostream &operator<<(std::ostream &o, const Animal &animal) {
 bool Animal::operator==(const Animal &rhs) {
   return _idade == rhs._idade && _nome == rhs._nome;
 }
+
+void Animal::dormir(int hours) {
+  std::cout << *this << " dorme " << hours << " horas." << std::endl;
+}

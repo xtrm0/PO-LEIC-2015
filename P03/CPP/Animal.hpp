@@ -12,6 +12,7 @@ public:
   void setIdade(int idade);
   std::string getNome();
   void setNome(std::string nome);
+  void dormir(int);
   friend std::ostream &operator<<(std::ostream &o, const Animal &animal);
   bool operator==(const Animal &rhs);
 };

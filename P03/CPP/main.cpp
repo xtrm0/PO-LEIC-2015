@@ -25,6 +25,7 @@ int main() {
   g1.trepar();
   c4.ladrar();
   g1.Gato::trepar();
+  g1.dormir(3);
   //cout << (g1.Animal == c4.Animal) << endl; //invalid, typecasts cant be done this way
 
 }
