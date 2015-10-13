@@ -3,6 +3,10 @@
 
 
 int main() {
+  /*
+    Neste primeiro C++ e importante que evitema o maximo instanciacoes desnecessarias.
+    Dito por outras palavras, sempre que possivel devem passar os argumentos por referencia (usando &) ou como ponteiros (usando *)
+  */
   Gato g1(1, "Fonfon", 7);
   Gato g2(1, "Fonfon", 7);
   std::cout << g1 << std::endl;

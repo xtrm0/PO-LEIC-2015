@@ -14,10 +14,12 @@ public:
 };
 
 class MotorEconomy : public Motor {
+public:
   void makeNoise();
 };
 
 class MotorExtreme : public Motor {
+public:
   void makeNoise();
 };
 

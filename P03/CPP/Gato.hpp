@@ -13,10 +13,10 @@ public:
     std::cout << *this << " trepou" << std::endl;
   }
   friend std::ostream &operator<<(std::ostream &o, const Gato &gato) {
-    return o << (Animal) gato << " (um gato com " << gato._vidas << " vidas)";
+    return o << (Animal&) gato << " (um gato com " << gato._vidas << " vidas)";
   }
   bool operator==(const Gato &rhs) {
-    return (Animal)*this == (Animal)rhs && _vidas == rhs._vidas;
+    return (Animal&)*this == rhs && _vidas == rhs._vidas;
   }
 };
 

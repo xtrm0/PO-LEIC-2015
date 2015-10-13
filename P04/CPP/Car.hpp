@@ -4,13 +4,29 @@
 #include "Motor.hpp"
 class Car {
   bool moving;
-  Motor &motor;
+protected:
+  MotorEconomy* motor;
 public:
   Car();
-  Car(Motor&);
-  ~Car();
-  void andar();
-  void parar();
+  Car(MotorEconomy&);
+  virtual ~Car();
+  virtual void andar();
+  virtual void parar();
+};
+
+class MediumCar : public Car {
+public:
+  Motor* switchMotor(MotorEconomy&);
+};
+
+class TopCar : public MediumCar {
+  MotorExtreme* secondMotor;
+public:
+  virtual ~TopCar();
+  TopCar();
+  Motor* switchSecondMotor(MotorExtreme&);
+  virtual void andar();
+  virtual void parar();
 };
 
 #endif

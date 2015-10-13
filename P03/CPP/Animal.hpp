@@ -7,11 +7,11 @@ class Animal {
   int _idade;
   std::string _nome;
 public:
-  Animal(int idade, std::string nome) : _idade(idade), _nome(nome) {};
+  Animal(int idade, std::string& nome) : _idade(idade), _nome(nome) {};
   int getIdade() {return _idade;}
   void setIdade(int idade) {_idade = idade;}
   std::string getNome() {return _nome;}
-  void setNome(std::string nome) {_nome = nome;}
+  void setNome(std::string& nome) {_nome = nome;}
   void dormir(int hours) {
     std::cout << *this << " dorme " << hours << " horas." << std::endl;
   }

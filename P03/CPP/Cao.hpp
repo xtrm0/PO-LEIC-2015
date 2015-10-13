@@ -13,10 +13,10 @@ public:
     std::cout << *this << ": bark bark ruf ruf" << std::endl;
   }
   friend std::ostream &operator<<(std::ostream &o, const Cao &cao) {
-    return o << (Animal) cao << " (um cão com " << cao._peso << " kilos)";
+    return o << (Animal&) cao << " (um cão com " << cao._peso << " kilos)";
   }
   bool operator==(const Cao &rhs) {
-    return (Animal)*this == (Animal)rhs && _peso == rhs._peso;
+    return (Animal&)*this == rhs && _peso == rhs._peso;
   }
 };
 
