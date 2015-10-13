@@ -3,15 +3,17 @@
 int main() {
   BracketsPrinter bPInstance;
   DoublePrinter dPInstance;
+  NthPrinter nPInstance(10);
   //Initializes a table with 10 default elements(0)
   Table t(10);
   t.print(bPInstance);
   t.print(dPInstance);
 
   //Initializes a table with an std::argument_list
-  Table t2({1,2,3,4,5,6,7,8,9,10});
+  Table t2({0,1,2,3,4,5,6,7,8,9});
   t2.print(bPInstance);
   t2.print(dPInstance);
+  t2.print(nPInstance);
 
   //Example on std::vector calling the Table constructor on std::vector::push_back
   std::vector<Table> Tn;

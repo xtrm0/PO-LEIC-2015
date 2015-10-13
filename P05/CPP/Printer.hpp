@@ -11,7 +11,7 @@ public:
 };
 
 /*
-  We considered implementing this derived classes as singletons, as we'll never need
+  We considered implementing some derived classes as singletons, as we'll never need
   more than one instance of the same class ever. The perfect way would be to use
   a static class, but there is no such thing in C++. Another way would be a global
   static object, but we wanted to avoid writing another .cpp file.
@@ -25,11 +25,7 @@ public:
     return instance;
   }*/
   std::string format(int i) {
-    std::string s;
-    std::stringstream ss;
-    ss << "[" << i << "]";
-    ss >> s;
-    return s;
+    return "[" + std::to_string(i) + "]";
   }
 private:
   /*BracketsPrinter (BracketsPrinter const&);
@@ -43,15 +39,29 @@ public:
     static DoublePrinter instance;
     return instance;
   }*/
+  //Non C++11 way:
   std::string format(int i) {
-    std::string s;
-    std::stringstream ss;
+    std::ostringstream ss;
     ss << i << " " << i;
-    ss >> s;
-    return s;
+    return ss.str();
   }
 private:
   /*DoublePrinter (DoublePrinter const&);
   void operator=  (DoublePrinter const&) = delete;*/
+};
+
+class NthPrinter : public Printer {
+  int N;
+public:
+  NthPrinter(int n) : N(n) {};
+  std::string format(int i) {
+    int n = N;
+    std::ostringstream ss;
+    if (n--)
+      ss << i;
+    while (n--)
+      ss << " " << i;
+    return ss.str();
+  }
 };
 #endif
