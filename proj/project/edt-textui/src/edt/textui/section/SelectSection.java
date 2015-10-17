@@ -1,6 +1,8 @@
 /** @version $Id: SelectSection.java,v 1.1 2015/10/05 16:00:37 david Exp $ */
 package edt.textui.section;
 
+import edt.core.Section;
+import edt.core.DocumentWorker;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -12,13 +14,13 @@ import java.io.IOException;
  * §2.2.4.
  */
 public class SelectSection extends SectionCommand {
-	public SelectSection(/* FIXME: decls of argument(s) for receiver(s) */) {
-		super(MenuEntry.SELECT_SECTION, /* FIXME: receiver(s) */);
+	public SelectSection(Section s, DocumentWorker w) {
+		super(MenuEntry.SELECT_SECTION, s, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException  {
 	 	/* FIXME: implement command */
-		edt.textui.section.MenuBuilder.menuFor(/* FIXME: receiver(s) */);
+		edt.textui.section.MenuBuilder.menuFor(receiver, docWork);
 	}
 }

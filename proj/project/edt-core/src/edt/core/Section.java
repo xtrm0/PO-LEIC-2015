@@ -1,9 +1,11 @@
 package edt.core;
 
 import java.util.List;
+import java.util.Stack;
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Section extends Node{
+public class Section extends Node {
 	private String title;
 	private List<Paragraph> subParagraphs; 
 	private List<Section> subSections;
@@ -49,14 +51,6 @@ public class Section extends Node{
 		x.setTitle(title);
 	}
 	
-	void recursiveCall(SectionRecursiveOperator c) {
-		c.execute(this);
-		for (Section sect : subSections) {
-			sect.recursiveCall(c);
-		}
-		c.executePostCall(this);
-	}
-	
 	public void deleteParagraph(int n) {
 		subParagraphs.get(n).delete();
 		subParagraphs.remove(n);
@@ -73,37 +67,44 @@ public class Section extends Node{
 		super.delete();
 		//TODO:
 	}
+
+	public Integer getSectionsCount() {
+		return subSections.size();
+	}
 }
 
 
-class SOListSections implements SectionRecursiveOperator {
-
-	@Override
-	public void execute(Section s) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void executePostCall(Section s) {
-		// TODO Auto-generated method stub
-		
+class SectionPrefixRecursiveIterator implements Iterator<Section> {
+	Section rootSection;
+	Stack<Integer> idStack;
+	boolean ended;
+	
+	public SectionPrefixRecursiveIterator(Section s) {
+		rootSection = s;
+		idStack = new Stack<Integer>();
+		idStack.push(0);
 	}
 	
-}
-
-class SOShowContent implements SectionRecursiveOperator {
-
 	@Override
-	public void execute(Section s) {
-		// TODO Auto-generated method stub
-		
+	public boolean hasNext() {
+		return !ended;
 	}
 
 	@Override
-	public void executePostCall(Section s) {
-		// TODO Auto-generated method stub
-		
+	public Section next() {
+		if (!hasNext()) return null;
+		Section ret = rootSection;
+		while (idStack.peek() == rootSection.getSectionsCount()) {
+			rootSection = (Section) rootSection.getParent();
+			idStack.pop();
+			if (idStack.isEmpty()) {
+				ended = true;
+				return ret;
+			}
+		}
+		rootSection = rootSection.getNthSection(idStack.peek());
+		idStack.push(0);
+		return ret;
 	}
 	
 }

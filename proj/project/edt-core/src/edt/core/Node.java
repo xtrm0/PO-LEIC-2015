@@ -33,15 +33,15 @@ abstract class Node {
 	private void notifyLength(Node son, int oldLength) {
 		int currLength = this.length;
 		length += son.length - oldLength;
-		if (parent != null)
-			parent.notifyLength(this, currLength);
+		if (getParent() != null)
+			getParent().notifyLength(this, currLength);
 	}
 
 	public void updateLength() {
 		int currLength = this.length;
 		this.length = calcLength();
-		if (parent != null)
-			parent.notifyLength(this, currLength);
+		if (getParent() != null)
+			getParent().notifyLength(this, currLength);
 	}
 
 	public int getLength() {
@@ -54,6 +54,10 @@ abstract class Node {
 	}
 	
 	protected abstract int calcLength();
+
+	public Node getParent() {
+		return parent;
+	}
 }
 
 class IdentificationFactory {
