@@ -1,9 +1,9 @@
 #include "Motor.hpp"
 Motor::Motor() : ligado(false) {};
-void Motor::Ligar() {
+void Motor::ligar() {
   ligado = true;
 }
-void Motor::Desligar() {
+void Motor::desligar() {
   ligado = false;
 }
 bool Motor::getLigado() {

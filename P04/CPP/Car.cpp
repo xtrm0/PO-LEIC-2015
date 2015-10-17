@@ -12,13 +12,13 @@ Car::~Car() {
 }
 
 void Car::andar() {
-  motor->Ligar();
+  motor->ligar();
   motor->makeNoise();
   moving = true;
 }
 
 void Car::parar() {
-  motor->Desligar();
+  motor->desligar();
   moving = false;
 }
 
@@ -39,7 +39,7 @@ Motor* TopCar::switchSecondMotor(MotorExtreme& secondMotor) {
 void TopCar::andar() {
   MediumCar::andar();
   if (secondMotor!=NULL) {
-    secondMotor->Ligar();
+    secondMotor->ligar();
     secondMotor->makeNoise();
   }
 }
@@ -47,7 +47,7 @@ void TopCar::andar() {
 void TopCar::parar() {
   MediumCar::parar();
   if (secondMotor!=NULL) {
-    secondMotor->Desligar();
+    secondMotor->desligar();
   }
 }
 

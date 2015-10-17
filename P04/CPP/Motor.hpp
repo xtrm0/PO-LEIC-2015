@@ -7,8 +7,8 @@ class Motor {
 public:
   Motor();
   virtual ~Motor();
-  void Ligar();
-  void Desligar();
+  void ligar();
+  void desligar();
   bool getLigado();
   virtual void makeNoise()=0;
 };

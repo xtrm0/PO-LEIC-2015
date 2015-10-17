@@ -19,7 +19,7 @@ int main() {
   cout << endl << "\033[1;31m" << "MediumCar:" << "\033[0m" << endl;
   mc = new MediumCar();
   mc->andar();
-  delete mc->switchMotor(*new MotorEconomy);
+  delete mc->switchMotor(*new MotorEconomy());
   mc->andar();
   mc->parar();
   delete mc;
@@ -32,12 +32,12 @@ int main() {
   tc->parar();
 
   cout << "Motor 2:" << endl;
-  tc->switchSecondMotor(*new MotorExtreme);
+  tc->switchSecondMotor(*new MotorExtreme());
   tc->andar();
   tc->parar();
 
   cout << "Motor 3:" << endl;
-  delete tc->switchSecondMotor(*new MotorExtreme);
+  delete tc->switchSecondMotor(*new MotorExtreme());
   tc->andar();
   tc->parar();
   delete tc;
