@@ -18,7 +18,7 @@ public class TextEditor {
 			/* FIXME: tell core object(s) to import data into core */
 			}
 		}
-		//edt.textui.main.MenuBuilder.menuFor(/* FIXME: core object */);
+		edt.textui.main.MenuBuilder.menuFor(/* FIXME: core object */);
 		IO.closeDown();
 	}
 }

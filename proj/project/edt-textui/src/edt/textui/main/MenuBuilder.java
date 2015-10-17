@@ -1,4 +1,4 @@
-/** @version $Id: MenuBuilder.java,v 1.1 2015/10/05 16:00:36 david Exp $ */
+/** @version $Id: MenuBuilder.java,v 1.2 2015/10/15 07:40:55 ist13500 Exp $ */
 package edt.textui.main;
 
 import ist.po.ui.Command;
@@ -14,6 +14,7 @@ public abstract class MenuBuilder {
             new Open(/* FIXME: receiver(s) */), //
             new Save(/* FIXME: receiver(s) */), //
             new ShowMetadata(/* FIXME: receiver(s) */), //
+            new AddAuthor(/* FIXME: receiver(s) */), //
             new ShowIndex(/* FIXME: receiver(s) */), //
             new ShowTextElement(/* FIXME: receiver(s) */), //
             new Edit(/* FIXME: receiver(s) */), //
