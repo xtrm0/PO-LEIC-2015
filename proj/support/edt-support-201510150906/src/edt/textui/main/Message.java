@@ -118,7 +118,7 @@ public class Message {
    * @return string for presenting number of identifiers in document
    */
   public static String documentIdentifiers(int nIdentifiers) {
-    return "Identificadores únicos: ";
+    return "Identificadores únicos: " + nIdentifiers;
   }
 
   /**

@@ -21,19 +21,11 @@ public class Message {
   }
 
   /**
-   * @param name
+   * @param localId
    * @return status message for new section.
    */
-  public static String newActiveSection(int name) {
-    return "Nova secção activa: '" + name + "'.";
-  }
-
-  /**
-   * @param name
-   * @return status message for new section.
-   */
-  public static String newActiveSection(String name) {
-    return "Nova secção activa: '" + name + "'.";
+  public static String newActiveSection(int localId) {
+    return "Nova secção activa: '" + localId + "'.";
   }
 
   /**
@@ -108,6 +100,13 @@ public class Message {
    */
   public static String paragraphNameChanged() {
     return "O nome do parágrafo foi alterado.";
+  }
+
+  /**
+   * @return prompt for unique identifier
+   */
+  public static String requestUniqueId() {
+    return "Identificador único: ";
   }
 
 }
