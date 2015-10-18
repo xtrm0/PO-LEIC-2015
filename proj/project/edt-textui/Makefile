@@ -10,3 +10,7 @@ clean:
 
 install:
 	/bin/cp $(JARNAME).jar $(JAVADIR)
+
+run: all
+	(cd src; java -cp $(JAVADIR)/po-uilib.jar:$(JAVADIR)/edt-support.jar:../../edt-core/edt-core.jar:../../edt-textui/edt-textui.jar edt.textui.TextEditor)
+	

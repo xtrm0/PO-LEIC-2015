@@ -7,11 +7,11 @@ import java.util.Iterator;
 
 public class Section extends Node {
 	private String title;
-	private List<Paragraph> subParagraphs; 
+	private List<Paragraph> subParagraphs;
 	private List<Section> subSections;
 	public Section(Node parent, IdentificationFactory factory) {
 		super(parent, factory);
-		title = null;
+		title = "";
 		subParagraphs = new ArrayList<Paragraph>(); //TODO: isto tem delete O(n). Podemos fazer uma bst com as 3 operacoes necessarias O(logn)
 		subSections = new ArrayList<Section>(); //TODO: isto tem delete O(n). Podemos fazer uma bst com as 3 operacoes necessarias O(logn)
 	}
@@ -21,7 +21,7 @@ public class Section extends Node {
 		//WARNING: TEMOS DE INCLUIR O LENGHT DOS FILHOS
 		return 0;
 	}
-	
+
 	public Paragraph getNthParagraph(int n) {
 		if (subParagraphs.size() < n || n < 0)
 			return subParagraphs.get(n);
@@ -38,38 +38,58 @@ public class Section extends Node {
 	}
 
 	public void setTitle(String title) {
+		if (title == null) title = "";
 		this.title = title;
 		updateLength();
 	}
-	
-	void insertSection(String title, int n) {
-		if (subSections.size() < n || n < 0) {
-			n = subSections.size();
-		}
+
+	public void insertSection(String title, int n) {
 		Section x = new Section(this, this.factory);
 		subSections.add(n, x);
 		x.setTitle(title);
 	}
-	
-	public void deleteParagraph(int n) {
+
+	public void insertParagraph(String text, int n) {
+		Paragraph x = new Paragraph(this, this.factory);
+		subParagraphs.add(n, x);
+		x.setText(text);
+	}
+
+	public void removeParagraph(int n) {
 		subParagraphs.get(n).delete();
 		subParagraphs.remove(n);
 	}
-	
-	public void deleteSubsection(int n) {
-		//TODO: recursive
+
+	public void removeSection(int n) {
 		subSections.get(n).delete();
 		subSections.remove(n);
 	}
-	
+
 	@Override
 	public void delete() {
 		super.delete();
-		//TODO:
+		for (Paragraph p : subParagraphs) {
+			p.delete();
+		}
+
+		Iterator<Section> it = getDirectIterator();
+		while (it.hasNext()) {
+			Section s = it.next();
+			s.delete();
+		}
 	}
 
 	public Integer getSectionsCount() {
 		return subSections.size();
+	}
+	public Integer getParagraphsCount() {
+		return subParagraphs.size();
+	}
+	public Iterator<Section> getPrefixIterator() {
+		return new SectionPrefixRecursiveIterator(this);
+	}
+	public Iterator<Section> getDirectIterator() {
+		return new SectionDirectChildIterator(this);
 	}
 }
 
@@ -78,13 +98,13 @@ class SectionPrefixRecursiveIterator implements Iterator<Section> {
 	Section rootSection;
 	Stack<Integer> idStack;
 	boolean ended;
-	
+
 	public SectionPrefixRecursiveIterator(Section s) {
 		rootSection = s;
 		idStack = new Stack<Integer>();
 		idStack.push(0);
 	}
-	
+
 	@Override
 	public boolean hasNext() {
 		return !ended;
@@ -106,5 +126,26 @@ class SectionPrefixRecursiveIterator implements Iterator<Section> {
 		idStack.push(0);
 		return ret;
 	}
-	
+}
+
+class SectionDirectChildIterator implements Iterator<Section> {
+	Section rootSection;
+	int n;
+
+	public SectionDirectChildIterator(Section s) {
+		rootSection = s;
+		n = 0;
+	}
+
+	@Override
+	public boolean hasNext() {
+		return (n < rootSection.getSectionsCount());
+	}
+
+	@Override
+	public Section next() {
+		if (!hasNext()) return null;
+		n++;
+		return rootSection.getNthSection(n-1);
+	}
 }

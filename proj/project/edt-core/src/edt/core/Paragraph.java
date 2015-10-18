@@ -1,11 +1,15 @@
 package edt.core;
 
-class Paragraph extends Node {
+public class Paragraph extends Node {
 	private String text;
 
 	public Paragraph(Node parent, IdentificationFactory factory) {
 		super(parent, factory);
-		text = new String("");
+		this.setText("");
+	}
+	public Paragraph(Node parent, IdentificationFactory factory, String text) {
+		super(parent, factory);
+		this.setText(text);
 	}
 
 	@Override
@@ -21,12 +25,4 @@ class Paragraph extends Node {
 	public String getText() {
 		return text;
 	}
-	
-	@Override
-	public void delete() {
-		super.delete();
-		this.text = "";
-		this.updateLength();
-	}
-
 }

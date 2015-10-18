@@ -3,7 +3,7 @@ package edt.core;
 import java.util.Set;
 import java.util.HashSet;
 
-class Author {
+public class Author {
 	private final String name;
 	private final String contact;
 
@@ -20,16 +20,4 @@ class Author {
 		return contact;
 	}
 
-}
-
-class AuthorFactory {
-	private Set<String> authors;
-
-	public AuthorFactory() {
-		authors = new HashSet<String>();
-	}
-
-	public boolean addAuthor(String authorName) {
-		return authors.add(authorName);
-	}
 }

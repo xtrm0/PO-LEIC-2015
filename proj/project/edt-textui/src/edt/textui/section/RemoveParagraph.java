@@ -1,8 +1,8 @@
-/** @version $Id: RemoveParagraph.java,v 1.1 2015/10/05 16:00:37 david Exp $ */
+/** @version $Id: RemoveParagraph.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.Document;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -14,13 +14,18 @@ import java.io.IOException;
  * §2.2.11.
  */
 public class RemoveParagraph extends SectionCommand {
-	public RemoveParagraph(Section s, DocumentWorker w) {
+	public RemoveParagraph(Section s, Document w) {
 		super(MenuEntry.REMOVE_PARAGRAPH, s, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-      		/* FIXME: implement command */
+		int parId = IO.readInteger(Message.requestParagraphId());
+    if (parId < 0 || parId >= _receiver.getSectionsCount()) {
+			IO.println(Message.noSuchParagraph(parId));
+      return;
+		}
+    _receiver.removeParagraph(parId);
 	}
 
 }

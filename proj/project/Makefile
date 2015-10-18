@@ -9,3 +9,6 @@ clean:
 install:
 	(cd edt-core; make $(MFLAGS) install)
 	(cd edt-textui; make $(MFLAGS) install)
+
+run:	all
+	(cd edt-textui; make $(MFLAGS) run)

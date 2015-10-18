@@ -1,8 +1,8 @@
-/** @version $Id: MenuBuilder.java,v 1.1 2015/10/05 16:00:37 david Exp $ */
+/** @version $Id: MenuBuilder.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.Document;
 import ist.po.ui.Command;
 import ist.po.ui.Menu;
 
@@ -12,7 +12,7 @@ import ist.po.ui.Menu;
  * Menu builder for search operations.
  */
 public class MenuBuilder {
-  public static void menuFor(Section s, DocumentWorker w) {
+  public static void menuFor(Section s, Document w) {
     Menu menu = new Menu(MenuEntry.TITLE,
         new Command<?>[] { //
             new ChangeTitle(s, w), //

@@ -1,8 +1,8 @@
-/** @version $Id: EditParagraph.java,v 1.1 2015/10/05 16:00:37 david Exp $ */
+/** @version $Id: EditParagraph.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.Document;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -14,13 +14,19 @@ import java.io.IOException;
  * §2.2.10.
  */
 public class EditParagraph extends SectionCommand {
-	public EditParagraph(Section s, DocumentWorker w) {
+	public EditParagraph(Section s, Document w) {
 		super(MenuEntry.EDIT_PARAGRAPH, s, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-	  	/* FIXME: implement command */
+		int parId = IO.readInteger(Message.requestParagraphId());
+		String text = IO.readString(Message.requestParagraphContent());
+		if (parId < 0 || parId >= _receiver.getParagraphsCount()) {
+			IO.readString(Message.noSuchParagraph(parId));
+			return;
+		}
+		_receiver.getNthParagraph(parId).setText(text);
 	}
 
 }

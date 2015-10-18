@@ -1,13 +1,9 @@
-/** @version $Id: TextEditor.java,v 1.1 2015/10/05 16:00:34 david Exp $ */
+/** @version $Id: TextEditor.java,v 1.2 2015/10/17 19:58:53 ist181861 Exp $ */
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;
 
-import java.io.IOException;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.IO;
-
-import edt.core.DocumentWorker;
+import edt.core.Document;
 
 /* FIXME: import core classes here */
 
@@ -16,15 +12,15 @@ import edt.core.DocumentWorker;
  */
 public class TextEditor {
 	public static void main(String[] args) {
-		/* FIXME: create core object(s) here */
+		Document mainWorker = new Document();
+
 		String datafile = System.getProperty("import"); //$NON-NLS-1$
 		if (datafile != null) {
 			/* FIXME: tell core object(s) to import data into core */
-			}
+			//WARN: No ideia what this is for :S
 		}
-	
-		DocumentWorker mainWorker = new DocumentWorker();
+
 		edt.textui.main.MenuBuilder.menuFor(mainWorker);
-		//IO.closeDown();
+		IO.closeDown();
 	}
 }

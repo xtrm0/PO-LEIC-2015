@@ -3,7 +3,7 @@ package edt.core;
 import java.util.Map;
 import java.util.HashMap;
 
-abstract class Node {
+public abstract class Node {
 	private String id;
 	protected IdentificationFactory factory;
 	private int length;
@@ -30,33 +30,39 @@ abstract class Node {
 		return id;
 	}
 
-	private void notifyLength(Node son, int oldLength) {
-		int currLength = this.length;
-		length += son.length - oldLength;
+	private void notifyLength(int deltaLenght) {
+		length += deltaLenght;
 		if (getParent() != null)
-			getParent().notifyLength(this, currLength);
+			getParent().notifyLength(deltaLenght);
 	}
 
 	public void updateLength() {
-		int currLength = this.length;
+		int oldLength = this.length;
 		this.length = calcLength();
 		if (getParent() != null)
-			getParent().notifyLength(this, currLength);
+			getParent().notifyLength(this.length - oldLength);
 	}
 
 	public int getLength() {
 		return length;
 	}
-	
+
 	public void delete() {
 		if (id!=null)
 			factory.removeNodeId(this.id);
+		if (parent!=null)
+			parent.notifyLength(-length);
+		parent = null;
 	}
-	
+
 	protected abstract int calcLength();
 
 	public Node getParent() {
 		return parent;
+	}
+
+	public int getIdentifiersCount() {
+		return factory.getNodesCount();
 	}
 }
 
@@ -84,8 +90,12 @@ class IdentificationFactory {
 		node.setId(id);
 		return rv;
 	}
-	
+
 	public void removeNodeId(String id) {
-		
+
+	}
+
+	public int getNodesCount() {
+		return nodes.size();
 	}
 }

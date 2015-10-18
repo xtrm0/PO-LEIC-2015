@@ -1,0 +1,7 @@
+1) Make edt-core outside errors / bad arguments proof. (we should probably use exceptions)
+
+2) Decide wheter or not use exceptions on edt-textui (ask teacher)
+
+3) Maybe test a litle bit?
+
+4) Add comments

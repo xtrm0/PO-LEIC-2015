@@ -1,8 +1,8 @@
-/** @version $Id: ChangeTitle.java,v 1.1 2015/10/05 16:00:37 david Exp $ */
+/** @version $Id: ChangeTitle.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.Document;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -14,12 +14,13 @@ import java.io.IOException;
  * §2.2.1.
  */
 public class ChangeTitle extends SectionCommand {
-	public ChangeTitle(Section s, DocumentWorker w) {
+	public ChangeTitle(Section s, Document w) {
 		super(MenuEntry.CHANGE_TITLE, s, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-    		/* FIXME: implement command */
+		String inp = IO.readString(Message.requestSectionTitle());
+  	_receiver.setTitle(inp);
 	}
 }
