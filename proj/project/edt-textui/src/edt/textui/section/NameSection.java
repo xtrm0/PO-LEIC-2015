@@ -1,4 +1,4 @@
-/** @version $Id: NameSection.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: NameSection.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -14,21 +14,21 @@ import java.io.IOException;
  * §2.2.6.
  */
 public class NameSection extends SectionCommand {
-  public NameSection(Section s, Document w) {
-    super(MenuEntry.NAME_SECTION, s, w);
-  }
+	public NameSection(Section s, Document w) {
+		super(MenuEntry.NAME_SECTION, s, w);
+	}
 
-  @Override
-  public final void execute() throws DialogException, IOException {
-    int sectId = IO.readInteger(Message.requestSectionId());
-    String newUniqId = IO.readString(Message.requestUniqueId());
-    if (sectId < 0 || sectId >= _receiver.getSectionsCount()) {
+	@Override
+	public final void execute() throws DialogException, IOException {
+		int sectId = IO.readInteger(Message.requestSectionId());
+		String newUniqId = IO.readString(Message.requestUniqueId());
+		if (sectId < 0 || sectId >= _receiver.getSectionsCount()) {
 			IO.println(Message.noSuchSection(sectId));
-      return;
+			return;
 		}
-    if (_receiver.getNthSection(sectId).getId() != null) {
-      IO.println(Message.sectionNameChanged());
-    }
-    _receiver.getNthSection(sectId).switchUniqueId(newUniqId);
-  }
+		if (_receiver.getNthSection(sectId).getId() != null) {
+			IO.println(Message.sectionNameChanged());
+		}
+		_receiver.getNthSection(sectId).switchUniqueId(newUniqId);
+	}
 }

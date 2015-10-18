@@ -48,9 +48,9 @@ public abstract class Node {
 	}
 
 	public void delete() {
-		if (id!=null)
+		if (id != null)
 			factory.removeNodeId(this.id);
-		if (parent!=null)
+		if (parent != null)
 			parent.notifyLength(-length);
 		parent = null;
 	}

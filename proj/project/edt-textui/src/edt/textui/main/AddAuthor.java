@@ -1,4 +1,4 @@
-/** @version $Id: AddAuthor.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: AddAuthor.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -22,9 +22,9 @@ public class AddAuthor extends Command<Document> {
 		String email = IO.readString(Message.requestEmail());
 
 		try {
-	  	_receiver.addAuthor(name, email);
-		} catch(Exception e) {
-			//nome repetido
+			_receiver.addAuthor(name, email);
+		} catch (Exception e) {
+			// nome repetido
 		}
 	}
 }

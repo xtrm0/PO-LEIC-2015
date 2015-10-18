@@ -1,4 +1,4 @@
-/** @version $Id: Save.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: Save.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -24,19 +24,20 @@ public class Save extends Command<Document> {
 		String inp = null;
 		File f = null;
 
-		if (_receiver.requestFilename()) { //Este comando nao faz sentido neste padrao de desenho :S
+		if (_receiver.requestFilename()) { // Este comando nao faz sentido neste
+											// padrao de desenho :S
 			inp = IO.readString(Message.openFile());
 			f = new File(inp);
 		}
 
 		try {
-			if (f==null) {
+			if (f == null) {
 				_receiver.save();
 			} else {
 				_receiver.save(f);
 			}
 		} catch (Exception e) {
-			//TODO
+			// TODO
 		}
 	}
 }

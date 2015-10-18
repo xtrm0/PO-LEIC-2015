@@ -7,6 +7,7 @@ public class Paragraph extends Node {
 		super(parent, factory);
 		this.setText("");
 	}
+
 	public Paragraph(Node parent, IdentificationFactory factory, String text) {
 		super(parent, factory);
 		this.setText(text);

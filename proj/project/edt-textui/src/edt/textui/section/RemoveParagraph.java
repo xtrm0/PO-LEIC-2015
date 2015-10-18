@@ -1,4 +1,4 @@
-/** @version $Id: RemoveParagraph.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: RemoveParagraph.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -21,11 +21,11 @@ public class RemoveParagraph extends SectionCommand {
 	@Override
 	public final void execute() throws DialogException, IOException {
 		int parId = IO.readInteger(Message.requestParagraphId());
-    if (parId < 0 || parId >= _receiver.getSectionsCount()) {
+		if (parId < 0 || parId >= _receiver.getSectionsCount()) {
 			IO.println(Message.noSuchParagraph(parId));
-      return;
+			return;
 		}
-    _receiver.removeParagraph(parId);
+		_receiver.removeParagraph(parId);
 	}
 
 }

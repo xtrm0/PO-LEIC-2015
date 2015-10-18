@@ -1,16 +1,21 @@
 package edt.core;
 
 import java.io.File;
+import java.io.Serializable;
+import java.io.IOException;
+import java.lang.ClassNotFoundException;
+import java.io.ObjectStreamException;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Document extends Section{
+public class Document extends Section implements Serializable{
 	private Set<String> authorsNamesUsed;
 	private ArrayList<Author> authors;
 
 	File saveLocation;
+
 	public Document() {
 		super(null, null);
 		saveLocation = null;
@@ -24,31 +29,31 @@ public class Document extends Section{
 	}
 
 	public void reset() {
-		//TODO: reset factory
+		// TODO: reset factory
 		saveLocation = null;
 		authorsNamesUsed = new HashSet<String>();
 		authors = new ArrayList<Author>();
 	}
 
 	public void addAuthor(String name, String email) {
-		//OPT: Do name and email validation
+		// OPT: Do name and email validation
 		if (!authorsNamesUsed.add(name)) {
-			//TODO: Throws
+			// TODO: Throws
 		}
-		authors.add(new Author(name,email));
+		authors.add(new Author(name, email));
 	}
 
 	public void loadFile(File p) {
-		//TODO: do stuff
+		// TODO: do stuff
 		saveLocation = p;
 	}
 
 	public void save() {
-		//TODO: do stuff
+		// TODO: do stuff
 	}
 
 	public void save(File f) {
-		//TODO: do stuff
+		// TODO: do stuff
 	}
 
 	public Node getElementById(String id) {
@@ -63,4 +68,14 @@ public class Document extends Section{
 		return authors;
 	}
 
+
+	private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+		//TODO
+	}
+	private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
+		//TODO
+	}
+	private void readObjectNoData() throws ObjectStreamException {
+		reset();
+	}
 }

@@ -1,4 +1,4 @@
-/** @version $Id: New.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: New.java,v 1.3 2015/10/18 01:59:15 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;

@@ -1,4 +1,4 @@
-/** @version $Id: ListSections.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: ListSections.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -21,7 +21,7 @@ public class ListSections extends SectionCommand {
 	public final void execute() throws DialogException, IOException {
 		Iterator<Section> it = _receiver.getPrefixIterator();
 		it.next();
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			Section s = it.next();
 			IO.println(Message.sectionIndexEntry(s.getId(), s.getTitle()));
 		}

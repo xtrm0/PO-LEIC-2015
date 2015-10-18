@@ -1,4 +1,4 @@
-/** @version $Id: TextEditor.java,v 1.2 2015/10/17 19:58:53 ist181861 Exp $ */
+/** @version $Id: TextEditor.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;
@@ -17,7 +17,7 @@ public class TextEditor {
 		String datafile = System.getProperty("import"); //$NON-NLS-1$
 		if (datafile != null) {
 			/* FIXME: tell core object(s) to import data into core */
-			//WARN: No ideia what this is for :S
+			// WARN: No ideia what this is for :S
 		}
 
 		edt.textui.main.MenuBuilder.menuFor(mainWorker);

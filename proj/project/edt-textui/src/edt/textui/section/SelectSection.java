@@ -1,4 +1,4 @@
-/** @version $Id: SelectSection.java,v 1.2 2015/10/17 19:58:55 ist181861 Exp $ */
+/** @version $Id: SelectSection.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -19,8 +19,8 @@ public class SelectSection extends SectionCommand {
 	}
 
 	@Override
-	public final void execute() throws DialogException, IOException  {
-	 	int newSectId = IO.readInteger(Message.requestSectionId());
+	public final void execute() throws DialogException, IOException {
+		int newSectId = IO.readInteger(Message.requestSectionId());
 		if (newSectId < 0 || newSectId >= _receiver.getSectionsCount()) {
 			IO.println(Message.noSuchSection(newSectId));
 		}

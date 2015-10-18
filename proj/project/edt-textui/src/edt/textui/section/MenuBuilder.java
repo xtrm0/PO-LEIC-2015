@@ -1,4 +1,4 @@
-/** @version $Id: MenuBuilder.java,v 1.2 2015/10/17 19:58:54 ist181861 Exp $ */
+/** @version $Id: MenuBuilder.java,v 1.3 2015/10/18 01:59:16 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
