@@ -1,15 +1,15 @@
 package edt.core;
 
-public class Paragraph extends Node {
+public class Paragraph extends Element {
 	private String text;
 
-	public Paragraph(Node parent, IdentificationFactory factory) {
-		super(parent, factory);
+	public Paragraph(Element parent) {
+		super(parent);
 		this.setText("");
 	}
 
-	public Paragraph(Node parent, IdentificationFactory factory, String text) {
-		super(parent, factory);
+	public Paragraph(Element parent, String text) {
+		super(parent);
 		this.setText(text);
 	}
 

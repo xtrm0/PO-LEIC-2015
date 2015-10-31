@@ -1,8 +1,9 @@
-/** @version $Id: ShowTextElement.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
+/** @version $Id: ShowTextElement.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui.main;
 
-import edt.core.Node;
+import edt.core.Element;
 import edt.core.Document;
+import edt.core.DocumentWorker;
 import edt.core.Paragraph;
 import edt.core.Section;
 import static ist.po.ui.Dialog.IO;
@@ -17,17 +18,18 @@ import java.io.IOException;
 /**
  * §2.1.5.
  */
-public class ShowTextElement extends Command<Document> {
-	public ShowTextElement(Document w) {
+public class ShowTextElement extends Command<DocumentWorker> {
+	public ShowTextElement(DocumentWorker w) {
 		super(MenuEntry.SHOW_TEXT_ELEMENT, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException {
+		Document recvDoc = _receiver.getCurrentDocument();
 		String id = IO.readString(Message.requestElementId());
-		Node target = _receiver.getElementById(id);
+		Element target = recvDoc.getElementById(id);
 		if (target == null) {
-			// is this better than throw?
+			// is this better than throw? //NO, XXX
 		} else if (target instanceof Section) {
 			Iterator<Section> it = ((Section) target).getPrefixIterator();
 			it.next();

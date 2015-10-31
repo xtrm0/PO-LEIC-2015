@@ -1,18 +1,16 @@
-/** @version $Id: TextEditor.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
+/** @version $Id: TextEditor.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;
 
-import edt.core.Document;
-
-/* FIXME: import core classes here */
+import edt.core.DocumentWorker;
 
 /**
  * Class that starts the application's textual interface.
  */
 public class TextEditor {
 	public static void main(String[] args) {
-		Document mainWorker = new Document();
+		DocumentWorker mainWorker = new DocumentWorker();
 
 		String datafile = System.getProperty("import"); //$NON-NLS-1$
 		if (datafile != null) {

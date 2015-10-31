@@ -1,4 +1,4 @@
-/** @version $Id: NameSection.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
+/** @version $Id: NameSection.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -29,6 +29,7 @@ public class NameSection extends SectionCommand {
 		if (_receiver.getNthSection(sectId).getId() != null) {
 			IO.println(Message.sectionNameChanged());
 		}
-		_receiver.getNthSection(sectId).switchUniqueId(newUniqId);
+		Section s = _receiver.getNthSection(sectId);
+		doc.addElementId(newUniqId,s);
 	}
 }

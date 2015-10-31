@@ -3,23 +3,15 @@ package edt.core;
 import java.util.Map;
 import java.util.HashMap;
 
-public abstract class Node {
+public abstract class Element {
 	private String id;
-	protected IdentificationFactory factory;
 	private int length;
-	private Node parent;
+	private Element parent;
 
-	public Node(Node parent, IdentificationFactory factory) {
+	public Element(Element parent) {
 		id = null;
 		length = 0;
 		this.parent = parent;
-		if (factory == null)
-			factory = new IdentificationFactory();
-		this.factory = factory;
-	}
-
-	public Node switchUniqueId(String id) {
-		return factory.addNodeId(id, this);
 	}
 
 	void setId(String id) {
@@ -48,8 +40,6 @@ public abstract class Node {
 	}
 
 	public void delete() {
-		if (id != null)
-			factory.removeNodeId(this.id);
 		if (parent != null)
 			parent.notifyLength(-length);
 		parent = null;
@@ -57,45 +47,7 @@ public abstract class Node {
 
 	protected abstract int calcLength();
 
-	public Node getParent() {
+	public Element getParent() {
 		return parent;
-	}
-
-	public int getIdentifiersCount() {
-		return factory.getNodesCount();
-	}
-}
-
-class IdentificationFactory {
-	private Map<String, Node> nodes;
-
-	public IdentificationFactory() {
-		nodes = new HashMap<String, Node>();
-	}
-
-	public Node findByUniqueId(String id) {
-		return nodes.get(id);
-	}
-
-	/*
-	 * Adds a <id,node> pair to the map. Returns the previous node with that id,
-	 * or null if there was none.
-	 */
-	public Node addNodeId(String id, Node node) {
-		Node rv = findByUniqueId(id);
-		if (rv != null) {
-			rv.setId(null);
-		}
-		nodes.put(id, node);
-		node.setId(id);
-		return rv;
-	}
-
-	public void removeNodeId(String id) {
-
-	}
-
-	public int getNodesCount() {
-		return nodes.size();
 	}
 }

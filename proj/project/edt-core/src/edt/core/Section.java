@@ -5,13 +5,13 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Section extends Node {
+public class Section extends Element {
 	private String title;
 	private List<Paragraph> subParagraphs;
 	private List<Section> subSections;
 
-	public Section(Node parent, IdentificationFactory factory) {
-		super(parent, factory);
+	public Section(Element parent) {
+		super(parent);
 		title = "";
 		subParagraphs = new ArrayList<Paragraph>(); // TODO: isto tem delete
 													// O(n). Podemos fazer uma
@@ -57,13 +57,13 @@ public class Section extends Node {
 	}
 
 	public void insertSection(String title, int n) {
-		Section x = new Section(this, this.factory);
+		Section x = new Section(this);
 		subSections.add(n, x);
 		x.setTitle(title);
 	}
 
 	public void insertParagraph(String text, int n) {
-		Paragraph x = new Paragraph(this, this.factory);
+		Paragraph x = new Paragraph(this);
 		subParagraphs.add(n, x);
 		x.setText(text);
 	}

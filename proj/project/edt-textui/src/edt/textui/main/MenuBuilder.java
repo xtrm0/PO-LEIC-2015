@@ -1,14 +1,13 @@
-/** @version $Id: MenuBuilder.java,v 1.4 2015/10/18 01:59:15 ist181861 Exp $ */
+/** @version $Id: MenuBuilder.java,v 1.6 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui.main;
 
+import edt.core.DocumentWorker;
 import edt.core.Document;
 import ist.po.ui.Command;
 import ist.po.ui.Menu;
 
-/* FIXME: import core classes here */
-
 public abstract class MenuBuilder {
-  public static void menuFor(Document w) {
+  public static void menuFor(DocumentWorker w) {
     Menu menu = new Menu(MenuEntry.TITLE,
         new Command<?>[] { //
             new New(w), //

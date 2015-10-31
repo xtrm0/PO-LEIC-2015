@@ -1,4 +1,4 @@
-/** @version $Id: SectionCommand.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
+/** @version $Id: SectionCommand.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -12,11 +12,11 @@ import ist.po.ui.Command;
  */
 public abstract class SectionCommand extends Command<Section> {
 
-	Document docWork;
+	Document doc;
 
 	public SectionCommand(String title, Section receiver, Document w) {
 		super(title, receiver);
-		docWork = w;
+		doc = w;
 		/* FIXME: initialize second receiver */
 	}
 

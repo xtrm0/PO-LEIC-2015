@@ -8,74 +8,69 @@ import java.io.ObjectStreamException;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Document extends Section implements Serializable{
+public class Document extends Section{
 	private Set<String> authorsNamesUsed;
 	private ArrayList<Author> authors;
-
-	File saveLocation;
+	private Map<String, Element> elementIds;
 
 	public Document() {
-		super(null, null);
-		saveLocation = null;
+		super(null);
 		authorsNamesUsed = new HashSet<String>();
 		authors = new ArrayList<Author>();
+		elementIds = new HashMap<String, Element>();
 	}
 
 	public Document(File p) {
 		this();
-		loadFile(p);
+		//XXX loadFile(p);
 	}
 
-	public void reset() {
-		// TODO: reset factory
-		saveLocation = null;
-		authorsNamesUsed = new HashSet<String>();
-		authors = new ArrayList<Author>();
-	}
-
-	public void addAuthor(String name, String email) {
-		// OPT: Do name and email validation
+	public boolean addAuthor(String name, String email) {
+		// XXX: Do name and email validation
 		if (!authorsNamesUsed.add(name)) {
 			// TODO: Throws
+			return false;
 		}
 		authors.add(new Author(name, email));
-	}
-
-	public void loadFile(File p) {
-		// TODO: do stuff
-		saveLocation = p;
-	}
-
-	public void save() {
-		// TODO: do stuff
-	}
-
-	public void save(File f) {
-		// TODO: do stuff
-	}
-
-	public Node getElementById(String id) {
-		return factory.findByUniqueId(id);
-	}
-
-	public boolean requestFilename() {
-		return this.saveLocation == null;
+		return true;
 	}
 
 	public ArrayList<Author> getAuthors() {
 		return authors;
 	}
 
+	/*Classes relacionadas com o controller de Id's: */
+	public Element getElementById(String id) {
+		return elementIds.get(id);
+	}
 
-	private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+	/*
+	 * Adds a <id,node> pair to the map. Returns the previous node with that id,
+	 * or null if there was none.
+	 */
+	public Element addElementId(String id, Element el) {
+		//XXX esta mal
+		Element rv = getElementById(id);
+		if (rv != null) {
+			rv.setId(null);
+		}
+		elementIds.put(id, el);
+		el.setId(id);
+		return rv;
+	}
+
+	/*
+		Removes a node with the given id
+	*/
+	public void removeElementWithId(String id) {
 		//TODO
 	}
-	private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
-		//TODO
-	}
-	private void readObjectNoData() throws ObjectStreamException {
-		reset();
+
+	public int getIdsCount() {
+		return elementIds.size();
 	}
 }

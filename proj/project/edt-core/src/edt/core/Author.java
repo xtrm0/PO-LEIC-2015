@@ -1,8 +1,5 @@
 package edt.core;
 
-import java.util.Set;
-import java.util.HashSet;
-
 public class Author {
 	private final String name;
 	private final String contact;
@@ -19,5 +16,7 @@ public class Author {
 	public String getContact() {
 		return contact;
 	}
+	
+	//XXX ToString
 
 }

@@ -1,7 +1,8 @@
-/** @version $Id: ShowIndex.java,v 1.3 2015/10/18 01:59:15 ist181861 Exp $ */
+/** @version $Id: ShowIndex.java,v 1.4 2015/10/22 21:20:48 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
+import edt.core.DocumentWorker;
 import edt.core.Section;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.Command;
@@ -15,15 +16,16 @@ import java.util.Iterator;
 /**
  * §2.1.4.
  */
-public class ShowIndex extends Command<Document> {
-	public ShowIndex(Document w) {
+public class ShowIndex extends Command<DocumentWorker> {
+	public ShowIndex(DocumentWorker w) {
 		super(MenuEntry.SHOW_INDEX, w);
 	}
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-		IO.println("{" + _receiver.getTitle() + "}");
-		Iterator<Section> it = _receiver.getDirectIterator();
+		Document recvDoc = _receiver.getCurrentDocument();
+		IO.println("{" + recvDoc.getTitle() + "}");
+		Iterator<Section> it = recvDoc.getDirectIterator();
 		while (it.hasNext()) {
 			Section s = it.next();
 			IO.println(Message.sectionIndexEntry(s.getId(), s.getTitle()));
