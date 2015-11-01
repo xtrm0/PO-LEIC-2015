@@ -2,7 +2,7 @@
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.Document;
+import edt.core.DocumentWorker;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -12,7 +12,7 @@ import java.io.IOException;
  * §2.2.5.
  */
 public class InsertSection extends SectionCommand {
-	public InsertSection(Section s, Document w) {
+	public InsertSection(Section s, DocumentWorker w) {
 		super(MenuEntry.INSERT_SECTION, s, w);
 	}
 
@@ -24,5 +24,6 @@ public class InsertSection extends SectionCommand {
 			sectId = _receiver.getSectionsCount();
 		}
 		_receiver.insertSection(title, sectId);
+		docW.setDirtyBit();
 	}
 }

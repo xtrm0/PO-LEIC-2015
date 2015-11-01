@@ -4,8 +4,9 @@ import java.util.List;
 import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.io.Serializable;
 
-public class Section extends Element {
+public class Section extends Element implements Serializable{
 	private String title;
 	private List<Paragraph> subParagraphs;
 	private List<Section> subSections;
@@ -34,15 +35,15 @@ public class Section extends Element {
 	}
 
 	public Paragraph getNthParagraph(int n) {
-		if (subParagraphs.size() < n || n < 0)
-			return subParagraphs.get(n);
-		return null;
+		if (subParagraphs.size() <= n || n < 0)
+			return null;
+		return subParagraphs.get(n);
 	}
 
 	public Section getNthSection(int n) {
-		if (subSections.size() < n || n < 0)
-			return subSections.get(n);
-		return null;
+		if (subSections.size() <= n || n < 0)
+			return null;
+		return subSections.get(n);
 	}
 
 	public String getTitle() {
@@ -56,40 +57,49 @@ public class Section extends Element {
 		updateLength();
 	}
 
-	public void insertSection(String title, int n) {
+	public boolean insertSection(String title, int n) {
+		if (subSections.size() < n || n < 0) return true;
 		Section x = new Section(this);
 		subSections.add(n, x);
 		x.setTitle(title);
+		return false;
 	}
 
-	public void insertParagraph(String text, int n) {
+	public boolean insertParagraph(String text, int n) {
+		if (subParagraphs.size() < n || n < 0) return true;
 		Paragraph x = new Paragraph(this);
 		subParagraphs.add(n, x);
 		x.setText(text);
+		return false;
 	}
 
-	public void removeParagraph(int n) {
-		subParagraphs.get(n).delete();
+	public boolean removeParagraph(int n) {
+		//Garante que é uma operação válida:
+		if (subParagraphs.size() <= n || n < 0) return true;
+		Paragraph p = subParagraphs.get(n);
+		if (p==null) return true;
+
+		//atualiza lenght:
+		notifyLength(-p.getLength());
+
+		//Remove efetivamente
 		subParagraphs.remove(n);
+		return false;
 	}
 
-	public void removeSection(int n) {
-		subSections.get(n).delete();
+	public boolean removeSection(int n) {
+		//Garante que é uma operação válida:
+		if (subSections.size() <= n || n < 0) return true;
+		Section s = subSections.get(n);
+		if (s == null) return true;
+
+		//Atualiza length:
+		notifyLength(-s.getLength());
+
+		//Remove efetivamente:
 		subSections.remove(n);
-	}
-
-	@Override
-	public void delete() {
-		super.delete();
-		for (Paragraph p : subParagraphs) {
-			p.delete();
-		}
-
-		Iterator<Section> it = getDirectIterator();
-		while (it.hasNext()) {
-			Section s = it.next();
-			s.delete();
-		}
+		//XXX:?: System.gc();
+		return false;
 	}
 
 	public Integer getSectionsCount() {
@@ -98,6 +108,10 @@ public class Section extends Element {
 
 	public Integer getParagraphsCount() {
 		return subParagraphs.size();
+	}
+
+	public Iterator<Paragraph> getParagraphIterator() {
+		return subParagraphs.iterator();
 	}
 
 	public Iterator<Section> getPrefixIterator() {
@@ -138,12 +152,12 @@ class SectionPrefixRecursiveIterator implements Iterator<Section> {
 	}
 
 	@Override
-	public Section next() { /*O op nao devia ser implementado no iterator, fica estranho :S*/
+	public Section next() {
 		if (!hasNext())
 			return null;
 		if (op!=null) op.onCall(rootSection);
 		Section ret = rootSection;
-		while (idStack.peek() == rootSection.getSectionsCount()) {
+		while (rootSection.getSectionsCount() == idStack.peek()) {
 			if (op!=null) op.onRet(rootSection);
 			rootSection = (Section) rootSection.getParent();
 			idStack.pop();
@@ -152,8 +166,11 @@ class SectionPrefixRecursiveIterator implements Iterator<Section> {
 				return ret;
 			}
 		}
-		rootSection = rootSection.getNthSection(idStack.peek());
+		int nx = idStack.peek();
+		idStack.pop();
+		idStack.push(nx+1);
 		idStack.push(0);
+		rootSection = rootSection.getNthSection(nx);
 		return ret;
 	}
 }

@@ -23,7 +23,7 @@ public class Open extends Command<DocumentWorker> {
 		String inp = IO.readString(Message.openFile());
 		File f = new File(inp);
 		try {
-			_receiver.loadFile(f);
+			_receiver.loadDocument(f);
 		} catch (Exception e) {
 			// TODO
 		}

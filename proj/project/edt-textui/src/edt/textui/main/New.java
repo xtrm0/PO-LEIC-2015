@@ -19,7 +19,7 @@ public class New extends Command<DocumentWorker> {
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-		_receiver.reset();
+		_receiver.newDocument();
 	}
 
 }

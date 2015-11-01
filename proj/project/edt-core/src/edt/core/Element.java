@@ -2,8 +2,9 @@ package edt.core;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.io.Serializable;
 
-public abstract class Element {
+public abstract class Element implements Serializable {
 	private String id;
 	private int length;
 	private Element parent;
@@ -22,7 +23,7 @@ public abstract class Element {
 		return id;
 	}
 
-	private void notifyLength(int deltaLenght) {
+	protected void notifyLength(int deltaLenght) {
 		length += deltaLenght;
 		if (getParent() != null)
 			getParent().notifyLength(deltaLenght);
@@ -37,12 +38,6 @@ public abstract class Element {
 
 	public int getLength() {
 		return length;
-	}
-
-	public void delete() {
-		if (parent != null)
-			parent.notifyLength(-length);
-		parent = null;
 	}
 
 	protected abstract int calcLength();

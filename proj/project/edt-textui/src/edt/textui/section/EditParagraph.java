@@ -2,19 +2,18 @@
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.Document;
+import edt.core.DocumentWorker;
+import edt.core.Paragraph;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
 import java.io.IOException;
 
-/* FIXME: import core classes here */
-
 /**
  * §2.2.10.
  */
 public class EditParagraph extends SectionCommand {
-	public EditParagraph(Section s, Document w) {
+	public EditParagraph(Section s, DocumentWorker w) {
 		super(MenuEntry.EDIT_PARAGRAPH, s, w);
 	}
 
@@ -22,11 +21,13 @@ public class EditParagraph extends SectionCommand {
 	public final void execute() throws DialogException, IOException {
 		int parId = IO.readInteger(Message.requestParagraphId());
 		String text = IO.readString(Message.requestParagraphContent());
-		if (parId < 0 || parId >= _receiver.getParagraphsCount()) {
+		Paragraph targetParagraph = _receiver.getNthParagraph(parId);
+		if (targetParagraph == null) {
 			IO.readString(Message.noSuchParagraph(parId));
 			return;
 		}
-		_receiver.getNthParagraph(parId).setText(text);
+		targetParagraph.setText(text);
+		docW.setDirtyBit();
 	}
 
 }

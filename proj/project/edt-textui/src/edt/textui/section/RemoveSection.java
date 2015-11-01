@@ -3,18 +3,17 @@ package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Document;
+import edt.core.DocumentWorker;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
 import java.io.IOException;
 
-/* FIXME: import core classes here */
-
 /**
  * §2.2.7.
  */
 public class RemoveSection extends SectionCommand {
-	public RemoveSection(Section s, Document w) {
+	public RemoveSection(Section s, DocumentWorker w) {
 		super(MenuEntry.REMOVE_SECTION, s, w);
 	}
 
@@ -26,7 +25,9 @@ public class RemoveSection extends SectionCommand {
 			return;
 		}
 
-		_receiver.removeSection(sectId);
+		Document doc = docW.getCurrentDocument();
+		doc.removeSection(_receiver, sectId);
+		docW.setDirtyBit();
 	}
 
 }

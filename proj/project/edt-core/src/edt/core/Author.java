@@ -16,7 +16,4 @@ public class Author {
 	public String getContact() {
 		return contact;
 	}
-	
-	//XXX ToString
-
 }

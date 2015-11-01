@@ -13,4 +13,6 @@ install:
 
 run: all
 	(cd src; java -cp $(JAVADIR)/po-uilib.jar:$(JAVADIR)/edt-support.jar:../../edt-core/edt-core.jar:../../edt-textui/edt-textui.jar edt.textui.TextEditor)
-	
+
+testrun: all
+		(cd src; java -cp $(JAVADIR)/po-uilib.jar:$(JAVADIR)/edt-support.jar:../../edt-core/edt-core.jar:../../edt-textui/edt-textui.jar edt.textui.TextEditor < ../../tests/test.in.1)

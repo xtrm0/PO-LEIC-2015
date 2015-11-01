@@ -10,8 +10,6 @@ import ist.po.ui.DialogException;
 
 import java.io.IOException;
 
-/* FIXME: import core classes here */
-
 /**
  * §2.3.1.
  */
@@ -24,7 +22,7 @@ public class Edit extends Command<DocumentWorker> {
 	public final void execute() throws DialogException, IOException {
 		Document recvDoc = _receiver.getCurrentDocument();
 		Section s = (Section) recvDoc;
-		edt.textui.section.MenuBuilder.menuFor(s, recvDoc);
+		edt.textui.section.MenuBuilder.menuFor(s, _receiver);
 	}
 
 }

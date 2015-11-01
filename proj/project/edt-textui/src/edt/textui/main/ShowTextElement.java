@@ -13,8 +13,6 @@ import ist.po.ui.DialogException;
 import java.util.Iterator;
 import java.io.IOException;
 
-/* FIXME: import core classes here */
-
 /**
  * §2.1.5.
  */
@@ -29,19 +27,23 @@ public class ShowTextElement extends Command<DocumentWorker> {
 		String id = IO.readString(Message.requestElementId());
 		Element target = recvDoc.getElementById(id);
 		if (target == null) {
-			// is this better than throw? //NO, XXX
+			IO.println(Message.noSuchTextElement(id));
+			return;
 		} else if (target instanceof Section) {
 			Iterator<Section> it = ((Section) target).getPrefixIterator();
 			it.next();
 			while (it.hasNext()) {
 				Section s = it.next();
-				IO.println(Message.sectionIndexEntry(s.getId(), s.getTitle()));
+				String currId = s.getId();
+				IO.println(Message.sectionIndexEntry(currId != null ? currId : "", s.getTitle()));
 				for (int j = 0; j < s.getParagraphsCount(); j++) {
 					IO.println(s.getNthParagraph(j).getText());
 				}
 			}
 		} else if (target instanceof Paragraph) {
 			IO.println(((Paragraph) target).getText());
+		} else {
+			//MAYBE: Put something here
 		}
 	}
 }

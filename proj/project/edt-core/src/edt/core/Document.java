@@ -11,8 +11,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
-public class Document extends Section{
+public class Document extends Section implements Serializable {
 	private Set<String> authorsNamesUsed;
 	private ArrayList<Author> authors;
 	private Map<String, Element> elementIds;
@@ -24,19 +25,13 @@ public class Document extends Section{
 		elementIds = new HashMap<String, Element>();
 	}
 
-	public Document(File p) {
-		this();
-		//XXX loadFile(p);
-	}
-
 	public boolean addAuthor(String name, String email) {
-		// XXX: Do name and email validation
+		// MAYBE: Do name and email validation
 		if (!authorsNamesUsed.add(name)) {
-			// TODO: Throws
-			return false;
+			return true;
 		}
 		authors.add(new Author(name, email));
-		return true;
+		return false;
 	}
 
 	public ArrayList<Author> getAuthors() {
@@ -63,11 +58,47 @@ public class Document extends Section{
 		return rv;
 	}
 
-	/*
-		Removes a node with the given id
-	*/
-	public void removeElementWithId(String id) {
-		//TODO
+	public boolean removeParagraph(Section s, int id) {
+		if (s == null) return true;
+		Paragraph p = s.getNthParagraph(id);
+		if (p == null) return true;
+		if (s.removeParagraph(id)) return true;
+
+		if (p.getId() != null) {
+			elementIds.remove(p.getId());
+		}
+
+		/*MAYBE:?:
+		p=null;
+		System.gc();*/
+
+		return false;
+	}
+
+	public boolean removeSection(Section s, int id) {
+		if (s == null) return true;
+		Section subSection = s.getNthSection(id);
+		if (subSection == null) return true;
+		if (s.removeSection(id)) return true;
+
+		//remove ids recursivamente:
+		Iterator<Section> it = subSection.getPrefixIterator();
+		while (it.hasNext()) {
+			Section target = it.next();
+			Iterator<Paragraph> pit = target.getParagraphIterator();
+			while (pit.hasNext()) {
+				Paragraph p = pit.next();
+				elementIds.remove(p.getId());
+			}
+			elementIds.remove(target.getId());
+		}
+
+		/*MAYBE:?:
+		it=null;
+		subSection=null;
+		System.gc();*/
+
+		return false;
 	}
 
 	public int getIdsCount() {

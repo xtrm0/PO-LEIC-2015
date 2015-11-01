@@ -2,7 +2,7 @@
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.Document;
+import edt.core.DocumentWorker;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -13,7 +13,7 @@ import java.util.Iterator;
  * §2.2.2.
  */
 public class ListSections extends SectionCommand {
-	public ListSections(Section s, Document w) {
+	public ListSections(Section s, DocumentWorker w) {
 		super(MenuEntry.LIST_SECTIONS, s, w);
 	}
 

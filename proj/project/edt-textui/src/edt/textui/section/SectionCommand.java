@@ -2,22 +2,19 @@
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.Document;
+import edt.core.DocumentWorker;
 import ist.po.ui.Command;
-
-/* FIXME: import core classes here */
 
 /**
  * Superclass of all section-context commands.
  */
 public abstract class SectionCommand extends Command<Section> {
 
-	Document doc;
+	DocumentWorker docW;
 
-	public SectionCommand(String title, Section receiver, Document w) {
+	public SectionCommand(String title, Section receiver, DocumentWorker w) {
 		super(title, receiver);
-		doc = w;
-		/* FIXME: initialize second receiver */
+		docW = w;
 	}
 
 }

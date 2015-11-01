@@ -12,3 +12,6 @@ install:
 
 run:	all
 	(cd edt-textui; make $(MFLAGS) run)
+
+testrun:	all
+	(cd edt-textui; make $(MFLAGS) testrun)

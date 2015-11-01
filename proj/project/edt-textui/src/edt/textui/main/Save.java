@@ -19,12 +19,13 @@ public class Save extends Command<DocumentWorker> {
 	}
 
 	@Override
+	//XXX: isto esta claramente mal feito, ie, nao cumpre as specs
 	public final void execute() throws DialogException, IOException {
 		String inp = null;
 		File f = null;
 
-		if (_receiver.requestFilename()) {
-			inp = IO.readString(Message.openFile());
+		if (_receiver.issetFilename()) {
+			inp = IO.readString(Message.saveAs());
 			f = new File(inp);
 		}
 

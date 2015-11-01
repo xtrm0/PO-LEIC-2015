@@ -2,7 +2,13 @@
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.nio.charset.Charset;
 
+import edt.core.Document;
 import edt.core.DocumentWorker;
 
 /**
@@ -15,7 +21,23 @@ public class TextEditor {
 		String datafile = System.getProperty("import"); //$NON-NLS-1$
 		if (datafile != null) {
 			/* FIXME: tell core object(s) to import data into core */
-			// WARN: No ideia what this is for :S
+			try {
+				Document doc = mainWorker.getCurrentDocument();
+				String tmp;
+				InputStream fis = new FileInputStream(datafile);
+    		InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+    		BufferedReader br = new BufferedReader(isr);
+				tmp = br.readLine();
+				doc.setTitle(tmp);
+				//XXX: Nao percebo como o ficheiro esta definido.
+				while ((tmp = br.readLine()) != null) {
+
+				}
+			} catch (Exception e) {
+			 	//XXX: nao faz nada, mas o ficheiro nao foi lido como deve de ser;
+				mainWorker.newDocument();
+
+			}
 		}
 
 		edt.textui.main.MenuBuilder.menuFor(mainWorker);

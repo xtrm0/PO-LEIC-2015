@@ -11,8 +11,6 @@ import ist.po.ui.DialogException;
 import java.io.IOException;
 import java.util.Iterator;
 
-/* FIXME: import core classes here */
-
 /**
  * §2.1.4.
  */
@@ -28,7 +26,8 @@ public class ShowIndex extends Command<DocumentWorker> {
 		Iterator<Section> it = recvDoc.getDirectIterator();
 		while (it.hasNext()) {
 			Section s = it.next();
-			IO.println(Message.sectionIndexEntry(s.getId(), s.getTitle()));
+			String currId = s.getId();
+			IO.println(Message.sectionIndexEntry(currId != null ? currId : "", s.getTitle()));
 		}
 	}
 }

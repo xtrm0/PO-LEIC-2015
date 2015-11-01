@@ -2,17 +2,15 @@
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.Document;
+import edt.core.DocumentWorker;
 import ist.po.ui.Command;
 import ist.po.ui.Menu;
-
-/* FIXME: import core classes here */
 
 /**
  * Menu builder for search operations.
  */
 public class MenuBuilder {
-  public static void menuFor(Section s, Document w) {
+  public static void menuFor(Section s, DocumentWorker w) {
     Menu menu = new Menu(MenuEntry.TITLE,
         new Command<?>[] { //
             new ChangeTitle(s, w), //

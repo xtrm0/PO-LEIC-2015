@@ -1,18 +1,8 @@
 0) Make changes:
-	+ Reimplement section worker
-	+ Identification factory should not exist
-	+ Some stuff on the url is wrong
-	+ Teacher doesnt likes the ideia of a recursive iterator. 
-Maybe he didnt notice SectionOperator interface.
-	+ Correct bugs with iterator (debug)
+ 	+ Some stuff on the url is wrong (XXX: WTF did I meant by this?!?)
 
-1) Make edt-core outside errors / bad arguments proof. (use exceptions)
-
-2) Decide wheter or not use exceptions on edt-textui (ask teacher) -> we 
-must use exceptions on core and threat them on edt-textui
-
-3) Maybe test a litle bit?
+1) Test recent changes:
+	+ Make prints show "" instead of null
+	+ Make section second receiver be a document worker, so that dirtyBit can be set easily
 
 4) Add comments
-
-5) Reimplement Iterators to make code cleaner

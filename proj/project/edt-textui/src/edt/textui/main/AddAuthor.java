@@ -23,10 +23,10 @@ public class AddAuthor extends Command<DocumentWorker> {
 		String name = IO.readString(Message.requestAuthorName());
 		String email = IO.readString(Message.requestEmail());
 
-		try {
-			recvDoc.addAuthor(name, email);
-		} catch (Exception e) {
-			// nome repetido, a ideia aqui e fazer throw da exception
+		if (recvDoc.addAuthor(name, email)) {
+			IO.println(Message.duplicateAuthor(name));
+		} else {
+			_receiver.setDirtyBit();
 		}
 	}
 }

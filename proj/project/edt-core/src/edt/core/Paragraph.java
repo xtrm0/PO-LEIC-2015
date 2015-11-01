@@ -1,6 +1,8 @@
 package edt.core;
 
-public class Paragraph extends Element {
+import java.io.Serializable;
+
+public class Paragraph extends Element implements Serializable {
 	private String text;
 
 	public Paragraph(Element parent) {
