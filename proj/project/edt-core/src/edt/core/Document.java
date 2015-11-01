@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class Document extends Section implements Serializable {
+public final class Document extends Section implements Serializable {
 	private Set<String> authorsNamesUsed;
 	private ArrayList<Author> authors;
 	private Map<String, Element> elementIds;
@@ -26,11 +26,12 @@ public class Document extends Section implements Serializable {
 	}
 
 	public boolean addAuthor(String name, String email) {
-		// MAYBE: Do name and email validation
-		if (!authorsNamesUsed.add(name)) {
+		//YYYY: name and email validation?
+		Author author = new Author(name,email);
+		if (!authorsNamesUsed.add(author.getName())) {
 			return true;
 		}
-		authors.add(new Author(name, email));
+		authors.add(author);
 		return false;
 	}
 
@@ -48,7 +49,6 @@ public class Document extends Section implements Serializable {
 	 * or null if there was none.
 	 */
 	public Element addElementId(String id, Element el) {
-		//XXX esta mal
 		Element rv = getElementById(id);
 		if (rv != null) {
 			rv.setId(null);

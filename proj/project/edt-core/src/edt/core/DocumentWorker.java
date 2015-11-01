@@ -17,7 +17,7 @@ import java.io.ObjectOutputStream;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 
-public class DocumentWorker {
+public final class DocumentWorker {
   private Document currDoc;
 
 	private File saveLocation;

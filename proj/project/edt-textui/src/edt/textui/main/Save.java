@@ -1,4 +1,4 @@
-/** @version $Id: Save.java,v 1.6 2015/10/22 21:20:48 ist181861 Exp $ */
+/** @version $Id: Save.java,v 1.7 2015/11/01 21:42:21 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -19,24 +19,20 @@ public class Save extends Command<DocumentWorker> {
 	}
 
 	@Override
-	//XXX: isto esta claramente mal feito, ie, nao cumpre as specs
 	public final void execute() throws DialogException, IOException {
 		String inp = null;
 		File f = null;
 
-		if (_receiver.issetFilename()) {
-			inp = IO.readString(Message.saveAs());
-			f = new File(inp);
-		}
-
 		try {
-			if (f == null) {
-				_receiver.save();
-			} else {
+			if (_receiver.issetFilename()) {
+				inp = IO.readString(Message.saveAs());
+				f = new File(inp);
 				_receiver.save(f);
+			} else {
+				_receiver.save();
 			}
 		} catch (Exception e) {
-			// TODO
+			//MAYBE: actualmente nao foi definido nada para fazer neste caso
 		}
 	}
 }

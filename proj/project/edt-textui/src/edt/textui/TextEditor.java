@@ -1,4 +1,4 @@
-/** @version $Id: TextEditor.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
+/** @version $Id: TextEditor.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;
@@ -29,12 +29,12 @@ public class TextEditor {
     		BufferedReader br = new BufferedReader(isr);
 				tmp = br.readLine();
 				doc.setTitle(tmp);
-				//XXX: Nao percebo como o ficheiro esta definido.
+				//YYYY: Nao percebo como o ficheiro esta definido.
 				while ((tmp = br.readLine()) != null) {
 
 				}
 			} catch (Exception e) {
-			 	//XXX: nao faz nada, mas o ficheiro nao foi lido como deve de ser;
+			 	//MAYBE: nao faz nada, mas o ficheiro nao foi lido como deve de ser. O que fazer?
 				mainWorker.newDocument();
 
 			}

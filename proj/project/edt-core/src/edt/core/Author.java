@@ -1,6 +1,6 @@
 package edt.core;
 
-public class Author {
+public final class Author {
 	private final String name;
 	private final String contact;
 

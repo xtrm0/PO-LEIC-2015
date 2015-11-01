@@ -1,4 +1,4 @@
-/** @version $Id: ShowIndex.java,v 1.4 2015/10/22 21:20:48 ist181861 Exp $ */
+/** @version $Id: ShowIndex.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;

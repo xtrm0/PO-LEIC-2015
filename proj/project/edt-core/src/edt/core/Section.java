@@ -51,9 +51,7 @@ public class Section extends Element implements Serializable{
 	}
 
 	public void setTitle(String title) {
-		if (title == null)
-			title = "";
-		this.title = title;
+		this.title = new String(title);
 		updateLength();
 	}
 
@@ -98,15 +96,14 @@ public class Section extends Element implements Serializable{
 
 		//Remove efetivamente:
 		subSections.remove(n);
-		//XXX:?: System.gc();
 		return false;
 	}
 
-	public Integer getSectionsCount() {
+	public int getSectionsCount() {
 		return subSections.size();
 	}
 
-	public Integer getParagraphsCount() {
+	public int getParagraphsCount() {
 		return subParagraphs.size();
 	}
 

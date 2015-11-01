@@ -1,4 +1,4 @@
-/** @version $Id: RemoveSection.java,v 1.4 2015/10/18 02:07:21 ist181861 Exp $ */
+/** @version $Id: RemoveSection.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;

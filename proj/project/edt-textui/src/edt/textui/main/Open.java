@@ -1,4 +1,4 @@
-/** @version $Id: Open.java,v 1.5 2015/10/22 21:20:48 ist181861 Exp $ */
+/** @version $Id: Open.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -25,7 +25,8 @@ public class Open extends Command<DocumentWorker> {
 		try {
 			_receiver.loadDocument(f);
 		} catch (Exception e) {
-			// TODO
+			//NOTE: This shows file not found everytime, even if the error was file not found.
+			IO.println(Message.fileNotFound(inp));
 		}
 	}
 

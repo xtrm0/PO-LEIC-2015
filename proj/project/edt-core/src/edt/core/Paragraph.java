@@ -12,7 +12,7 @@ public class Paragraph extends Element implements Serializable {
 
 	public Paragraph(Element parent, String text) {
 		super(parent);
-		this.setText(text);
+		this.setText(new String(text));
 	}
 
 	@Override
@@ -21,7 +21,7 @@ public class Paragraph extends Element implements Serializable {
 	}
 
 	public void setText(String text) {
-		this.text = text;
+		this.text = new String(text);
 		this.updateLength();
 	}
 
