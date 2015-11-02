@@ -14,7 +14,8 @@ protected:
 public:
   Beneficiary(const string& name) {
     id = this->currId;
-    this->currId = (1103515245*this->currId + 12345)%(1ULL<<31);
+    this->currId = (1103515245*this->currId + 12345)%(1ULL<<31); //Isto nao e melhor forma de o fazer, mas damos a cada Beneficiario um id unico.
+    //Com a seed atual, e possivel haver K benificiarios diferentes
     this->name = name;
   }
   double getValue() {
@@ -98,6 +99,11 @@ public:
     for (std::vector<Beneficiary *>::iterator it=ben.begin(); it!= ben.end(); it++) {
       if ((*it)->id != b.id && (*it)->contains(b.id))
         (*it)->addValue(ammount);
+    }
+  }
+  ~Beneficiary(){
+    for (std::vector<Beneficiary *>::iterator it=ben.begin(); it!= ben.end(); it++) {
+      delete (*it);
     }
   }
 };

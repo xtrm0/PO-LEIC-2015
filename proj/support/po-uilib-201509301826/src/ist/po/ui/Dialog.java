@@ -31,7 +31,7 @@ public class Dialog {
 
 		/**
 		 * Error message for file-not-found errors (input).
-		 * 
+		 *
 		 * @param fnfe
 		 *            an exception corresponding to a file-not-found problem.
 		 * @return error message.
@@ -42,7 +42,7 @@ public class Dialog {
 
 		/**
 		 * Error message for file-not-found errors (output).
-		 * 
+		 *
 		 * @param fnfe
 		 *            an exception corresponding to a file-not-found problem.
 		 * @return error message.
@@ -53,7 +53,7 @@ public class Dialog {
 
 		/**
 		 * Error message for file-not-found errors (log).
-		 * 
+		 *
 		 * @param fnfe
 		 *            an exception corresponding to a file-not-found problem.
 		 * @return error message.
@@ -64,7 +64,7 @@ public class Dialog {
 
 		/**
 		 * Error message for IO errors (closing input).
-		 * 
+		 *
 		 * @param ioe
 		 *            an IO exception.
 		 * @return error message.
@@ -75,7 +75,7 @@ public class Dialog {
 
 		/**
 		 * Error message for number format errors.
-		 * 
+		 *
 		 * @param nfe
 		 *            a <code>NumberFormatException</code>.
 		 * @return error message.
@@ -86,7 +86,7 @@ public class Dialog {
 
 		/**
 		 * Error message for EOF errors.
-		 * 
+		 *
 		 * @return error message.
 		 */
 		static final String endOfInput() {
@@ -204,7 +204,7 @@ public class Dialog {
 
 	/**
 	 * Read an integer number from the input.
-	 * 
+	 *
 	 * @param prompt
 	 *            a prompt (may be null)
 	 * @return the number read from the input.
@@ -223,7 +223,7 @@ public class Dialog {
 
 	/**
 	 * Read a floating point number from the input.
-	 * 
+	 *
 	 * @param prompt
 	 *            a prompt (may be null)
 	 * @return the number read from the input.
@@ -242,13 +242,13 @@ public class Dialog {
 
 	/**
 	 * Read a boolean from the input. 's' corresponds to true and 'n' to false.
-	 * 
+	 *
 	 * @param prompt
 	 *            a prompt (may be null)
 	 * @return the boolean read from the input.
 	 * @throws IOException
 	 *             in case of read errors
-	 * 
+	 *
 	 */
 	public final boolean readBoolean(String prompt) throws IOException {
 		while (true) {
@@ -260,7 +260,7 @@ public class Dialog {
 
 	/**
 	 * Read a string.
-	 * 
+	 *
 	 * @param prompt
 	 *            a prompt (may be null)
 	 * @return the string read from the input.
@@ -290,7 +290,7 @@ public class Dialog {
 
 	/**
 	 * Write a string.
-	 * 
+	 *
 	 * @param text
 	 *            string to write.
 	 */
