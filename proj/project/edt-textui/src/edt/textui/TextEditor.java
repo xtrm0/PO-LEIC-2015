@@ -29,7 +29,7 @@ public class TextEditor {
     		BufferedReader br = new BufferedReader(isr);
 				tmp = br.readLine();
 				doc.setTitle(tmp);
-				//YYYY: Nao percebo como o ficheiro esta definido.
+				//FIXME: Nao percebo como o ficheiro esta definido :S.
 				while ((tmp = br.readLine()) != null) {
 
 				}

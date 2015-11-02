@@ -29,15 +29,15 @@ public class Section extends Element implements Serializable{
 		return ans;
 	}
 
-	public Paragraph getNthParagraph(int n) throws IndexOutOfBoundsException {
+	public Paragraph getNthParagraph(int n) {
 		if (subParagraphs.size() <= n || n < 0)
-			throw new IndexOutOfBoundsException();
+			return null;
 		return subParagraphs.get(n);
 	}
 
-	public Section getNthSection(int n) throws IndexOutOfBoundsException {
+	public Section getNthSection(int n) {
 		if (subSections.size() <= n || n < 0)
-			throw new IndexOutOfBoundsException();
+			return null;
 		return subSections.get(n);
 	}
 
@@ -68,6 +68,7 @@ public class Section extends Element implements Serializable{
 
 	protected void removeParagraph(int n) throws IndexOutOfBoundsException {
 		Paragraph p = subParagraphs.get(n);
+		if (p==null) throw new IndexOutOfBoundsException();
 		//atualiza lenght:
 		notifyLength(-p.getLength());
 		//Remove efetivamente
@@ -76,6 +77,7 @@ public class Section extends Element implements Serializable{
 
 	protected void removeSection(int n) throws IndexOutOfBoundsException {
 		Section s = subSections.get(n);
+		if (s==null) throw new IndexOutOfBoundsException();
 		//Atualiza length:
 		notifyLength(-s.getLength());
 		//Remove efetivamente:

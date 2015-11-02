@@ -1,8 +1,4 @@
 0) Make changes:
  	+ Some stuff on the url is wrong (XXX: WTF did I meant by this?!?)
 
-1) Test recent changes:
-	+ Make prints show "" instead of null
-	+ Make section second receiver be a document worker, so that dirtyBit can be set easily
-
 4) Add comments

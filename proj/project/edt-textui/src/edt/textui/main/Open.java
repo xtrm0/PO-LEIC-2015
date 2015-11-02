@@ -24,9 +24,10 @@ public class Open extends Command<DocumentWorker> {
 		File f = new File(inp);
 		try {
 			_receiver.loadDocument(f);
-		} catch (Exception e) {
-			//NOTE: This shows file not found everytime, even if the error was file not found.
+		} catch (IOException e) {
 			IO.println(Message.fileNotFound(inp));
+		} catch (ClassNotFoundException|IllegalArgumentException e) {
+			//Dont know what to do
 		}
 	}
 

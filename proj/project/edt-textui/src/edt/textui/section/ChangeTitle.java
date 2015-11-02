@@ -19,7 +19,7 @@ public class ChangeTitle extends SectionCommand {
 	@Override
 	public final void execute() throws DialogException, IOException {
 		String inp = IO.readString(Message.requestSectionTitle());
-		_receiver.setTitle(inp);
+		_receiver.setTitle(inp); 
 		docW.setDirtyBit();
 	}
 }
