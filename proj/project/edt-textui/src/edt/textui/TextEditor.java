@@ -39,6 +39,11 @@ public class TextEditor {
 
 			}
 		}
+		try {
+			mainWorker.getCurrentDocument().addAuthor(null, null);
+		}	catch (Exception e) {
+			System.out.println("EXception caught!!!");
+		}
 
 		edt.textui.main.MenuBuilder.menuFor(mainWorker);
 		IO.closeDown();

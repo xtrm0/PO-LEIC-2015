@@ -5,6 +5,7 @@ import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.io.Serializable;
+import java.util.NoSuchElementException;
 
 public class Section extends Element implements Serializable{
 	private String title;
@@ -14,14 +15,8 @@ public class Section extends Element implements Serializable{
 	protected Section(Element parent) {
 		super(parent);
 		title = "";
-		subParagraphs = new ArrayList<Paragraph>(); // TODO: isto tem delete
-													// O(n). Podemos fazer uma
-													// bst com as 3 operacoes
-													// necessarias O(logn)
-		subSections = new ArrayList<Section>(); // TODO: isto tem delete O(n).
-												// Podemos fazer uma bst com as
-												// 3 operacoes necessarias
-												// O(logn)
+		subParagraphs = new ArrayList<Paragraph>(); // MAYBE: isto tem delete O(n). Podemos fazer uma bst com as 3 operacoes necessarias O(logn)
+		subSections = new ArrayList<Section>(); // MAYBE: isto tem delete O(n). Podemos fazer uma bst com as 3 operacoes necessarias O(logn)
 	}
 
 	@Override
@@ -34,15 +29,15 @@ public class Section extends Element implements Serializable{
 		return ans;
 	}
 
-	public Paragraph getNthParagraph(int n) {
+	public Paragraph getNthParagraph(int n) throws IndexOutOfBoundsException {
 		if (subParagraphs.size() <= n || n < 0)
-			return null;
+			throw new IndexOutOfBoundsException();
 		return subParagraphs.get(n);
 	}
 
-	public Section getNthSection(int n) {
+	public Section getNthSection(int n) throws IndexOutOfBoundsException {
 		if (subSections.size() <= n || n < 0)
-			return null;
+			throw new IndexOutOfBoundsException();
 		return subSections.get(n);
 	}
 
@@ -50,61 +45,41 @@ public class Section extends Element implements Serializable{
 		return title;
 	}
 
-	public void setTitle(String title) {
-		if (title == null); //TODO: throw
+	public void setTitle(String title) throws NullPointerException {
 		this.title = new String(title);
 		updateLength();
 	}
 
-	//TODO: catch null string and throw
-	public boolean insertSection(String title, int n) {
-		if (subSections.size() < n || n < 0) return true; //TODO: throw the right kind of exception
-		Section x = new Section(this);
-		try {
-			x.setTitle(title);
-		} catch (Exception e) {//TODO: fix this to throw the right exception
-			throw e;
-		}
+	public boolean insertSection(String title, int n) throws IndexOutOfBoundsException, NullPointerException {
+		if (subSections.size() < n || n < 0) throw new IndexOutOfBoundsException();
+		Section x = new Section(this); //this might throw, and we let it go up the call chain
+		x.setTitle(title);
 		subSections.add(n, x);
 		return false;
 	}
 
-	public boolean insertParagraph(String text, int n) {
-		if (subParagraphs.size() < n || n < 0) return true; //TODO: throw the right kind of exception
-		Paragraph x = new Paragraph(this);
-		try {
-			x.setText(text);
-		} catch (Exception e) { //TODO: fix this to throw the right exception
-			throw e;
-		}
+	public boolean insertParagraph(String text, int n) throws IndexOutOfBoundsException, NullPointerException {
+		if (subParagraphs.size() < n || n < 0) throw new IndexOutOfBoundsException();
+		Paragraph x = new Paragraph(this); //this might throw, and we let it go up the call chain
+		x.setText(text);
 		subParagraphs.add(n, x);
 		return false;
 	}
 
-	protected boolean removeParagraph(int n) {
-		//Garante que é uma operação válida: TODO: we should do this somewhere?
-		if (subParagraphs.size() <= n || n < 0) return true;
+	protected void removeParagraph(int n) throws IndexOutOfBoundsException {
 		Paragraph p = subParagraphs.get(n);
-
 		//atualiza lenght:
 		notifyLength(-p.getLength());
-
 		//Remove efetivamente
 		subParagraphs.remove(n);
-		return false;
 	}
 
-	protected boolean removeSection(int n) {
-		//Garante que é uma operação válida: TODO: we should do this somewhere?
-		if (subSections.size() <= n || n < 0) return true;
+	protected void removeSection(int n) throws IndexOutOfBoundsException {
 		Section s = subSections.get(n);
-
 		//Atualiza length:
 		notifyLength(-s.getLength());
-
 		//Remove efetivamente:
 		subSections.remove(n);
-		return false;
 	}
 
 	public int getSectionsCount() {
@@ -120,88 +95,62 @@ public class Section extends Element implements Serializable{
 	}
 
 	public Iterator<Section> getPrefixIterator() {
-		return new SectionPrefixRecursiveIterator(this);
+		return new SectionPrefixRecursiveIterator();
 	}
 
 	public Iterator<Section> getDirectIterator() {
-		return new SectionDirectChildIterator(this);
+		return subSections.iterator();
 	}
 
 	public void runAutoOperator(SectionOperator op) {
-		SectionPrefixRecursiveIterator it = new SectionPrefixRecursiveIterator(this, op);
+		SectionPrefixRecursiveIterator it = new SectionPrefixRecursiveIterator(op);
 		while(it.hasNext()) it.next();
 	}
-}
 
-//XXX:2: Change this to be a private class
-class SectionPrefixRecursiveIterator implements Iterator<Section> {
-	Section rootSection;
-	Stack<Integer> idStack;
-	SectionOperator op;
-	boolean ended;
+	class SectionPrefixRecursiveIterator implements Iterator<Section> {
+		Section rootSection;
+		Stack<Integer> idStack;
+		SectionOperator op;
+		boolean ended;
 
-	public SectionPrefixRecursiveIterator(Section s) {
-		rootSection = s;
-		idStack = new Stack<Integer>();
-		idStack.push(0);
-		op=null;
-	}
-
-	public SectionPrefixRecursiveIterator(Section s, SectionOperator op) {
-		this(s);
-		this.op = op;
-	}
-
-	@Override
-	public boolean hasNext() {
-		return !ended;
-	}
-
-	@Override
-	public Section next() {
-		if (!hasNext())
-			return null;
-		if (op!=null) op.onCall(rootSection);
-		Section ret = rootSection;
-		while (rootSection.getSectionsCount() == idStack.peek()) {
-			if (op!=null) op.onRet(rootSection);
-			rootSection = (Section) rootSection.getParent();
-			idStack.pop();
-			if (idStack.isEmpty()) {
-				ended = true;
-				return ret;
-			}
+		public SectionPrefixRecursiveIterator() {
+			rootSection = Section.this;
+			idStack = new Stack<Integer>();
+			idStack.push(0);
+			op=null;
 		}
-		int nx = idStack.peek();
-		idStack.pop();
-		idStack.push(nx+1);
-		idStack.push(0);
-		rootSection = rootSection.getNthSection(nx);
-		return ret;
-	}
-}
 
+		public SectionPrefixRecursiveIterator(SectionOperator op) {
+			this();
+			this.op = op;
+		}
 
-//MAYBE: remove this class at all?
-class SectionDirectChildIterator implements Iterator<Section> {
-	Section rootSection;
-	int n;
+		@Override
+		public boolean hasNext() {
+			return !ended;
+		}
 
-	public SectionDirectChildIterator(Section s) {
-		rootSection = s;
-		n = 0;
-	}
-
-	@Override
-	public boolean hasNext() {
-		return (n < rootSection.getSectionsCount());
-	}
-
-	@Override
-	public Section next() {
-		if (!hasNext())
-			return null;
-		n++;
-		return rootSection.getNthSection(n - 1);
+		@Override
+		public Section next() throws NoSuchElementException{
+			if (!hasNext())
+				throw new NoSuchElementException();
+			if (op!=null) op.onCall(rootSection);
+			Section ret = rootSection;
+			while (rootSection.getSectionsCount() == idStack.peek()) {
+				if (op!=null) op.onRet(rootSection);
+				rootSection = (Section) rootSection.getParent();
+				idStack.pop();
+				if (idStack.isEmpty()) {
+					ended = true;
+					return ret;
+				}
+			}
+			int nx = idStack.peek();
+			idStack.pop();
+			idStack.push(nx+1);
+			idStack.push(0);
+			rootSection = rootSection.getNthSection(nx);
+			return ret;
+		}
 	}
 }

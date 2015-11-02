@@ -22,11 +22,14 @@ public class AddAuthor extends Command<DocumentWorker> {
 		Document recvDoc = _receiver.getCurrentDocument();
 		String name = IO.readString(Message.requestAuthorName());
 		String email = IO.readString(Message.requestEmail());
-
-		if (recvDoc.addAuthor(name, email)) {
-			IO.println(Message.duplicateAuthor(name));
-		} else {
-			_receiver.setDirtyBit();
+ 		try {
+			if (recvDoc.addAuthor(name, email)) {
+				IO.println(Message.duplicateAuthor(name));
+			} else {
+				_receiver.setDirtyBit();
+			}
+		} catch (NullPointerException ex) {
+			//caso o nome/email do autor seja null. Nao ha definicao para isto ainda
 		}
 	}
 }

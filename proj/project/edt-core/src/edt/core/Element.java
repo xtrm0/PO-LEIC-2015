@@ -1,7 +1,5 @@
 package edt.core;
 
-import java.util.Map;
-import java.util.HashMap;
 import java.io.Serializable;
 
 public abstract class Element implements Serializable {

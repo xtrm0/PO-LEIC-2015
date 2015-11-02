@@ -1,21 +1,13 @@
 package edt.core;
 
 import java.io.File;
-import java.io.Serializable;
+
 import java.io.IOException;
 import java.lang.ClassNotFoundException;
-import java.io.ObjectStreamException;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.List;
-import java.util.ArrayList;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 
 public final class DocumentWorker {
   private Document currDoc;
@@ -46,12 +38,9 @@ public final class DocumentWorker {
     dirtyBit = false;
 	}
 
-//XXX: check if saving was sucessfull
-//XXX: check if timestamp on disk differs
-//XXX: ask teacher how are we suposed to check wheter we should write the file or not
 	public void save() throws IOException, IllegalArgumentException {
     if (dirtyBit == false) {
-      return; //TODO: Add an exception for this ?
+      return; //MAYBE: What to do here?
     }
     if (saveLocation == null) {
       throw new IllegalArgumentException("Null is not a valid File");
@@ -62,12 +51,6 @@ public final class DocumentWorker {
     dirtyBit = false;
 	}
 
-//XXX: check xxx definitions for save above,
-/*HACK: Is this ok?
-  What is better to keep the strong exception guarantee:
-    1) Use the same code twice
-    2) Use a try-catch and on the catch do a rollback and throw back
-*/
 	public void save(File path) throws IOException, IllegalArgumentException {
     boolean oldDirtyBit = dirtyBit;
     File oldPath = saveLocation;

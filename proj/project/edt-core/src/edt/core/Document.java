@@ -1,13 +1,8 @@
 package edt.core;
 
-import java.io.File;
 import java.io.Serializable;
-import java.io.IOException;
-import java.lang.ClassNotFoundException;
-import java.io.ObjectStreamException;
 import java.util.Set;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,9 +20,8 @@ public final class Document extends Section implements Serializable {
 		elementIds = new HashMap<String, Element>();
 	}
 
-	public boolean addAuthor(String name, String email) {
-		//TODO: name and email validation
-		Author author = new Author(name,email);
+	public boolean addAuthor(String name, String email) throws NullPointerException  {
+		Author author = new Author(name,email); //name and email are validated in Author constructor (this might throw)
 		if (!authorsNamesUsed.add(author.getName())) {
 			return true;
 		}
@@ -41,18 +35,16 @@ public final class Document extends Section implements Serializable {
 
 	/*Classes relacionadas com o controller de Id's: */
 	public Element getElementById(String id) {
-		//TODO: id validation throw
+		if (id==null) return null; //nao queremos que null seja uma key
 		return elementIds.get(id);
 	}
 
 	/*
 	 * Adds a <id,node> pair to the map. Returns the previous node with that id,
 	 * or null if there was none.
-	 * TODO: This should throw
 	 */
-	public Element addElementId(String id, Element el) {
-		//TODO: add validation
-		if (id==null) return null;// THIS SHOULD THROW
+	public Element addElementId(String id, Element el) throws NullPointerException {
+		if (id==null || el==null) throw new NullPointerException();
 		Element rv = getElementById(id);
 		if (rv != null) {
 			rv.setId(null);
@@ -62,11 +54,10 @@ public final class Document extends Section implements Serializable {
 		return rv;
 	}
 
-	public boolean removeParagraph(Section s, int id) {
-		if (s == null) return true;
+	public void removeParagraph(Section s, int id) throws NullPointerException, IndexOutOfBoundsException {
+		if (s == null) throw new NullPointerException();
 		Paragraph p = s.getNthParagraph(id);
-		if (p == null) return true;
-		if (s.removeParagraph(id)) return true;
+		s.removeParagraph(id);
 
 		if (p.getId() != null) {
 			elementIds.remove(p.getId());
@@ -75,15 +66,12 @@ public final class Document extends Section implements Serializable {
 		/*MAYBE:?:
 		p=null;
 		System.gc();*/
-
-		return false;
 	}
 
-	public boolean removeSection(Section s, int id) {
-		if (s == null) return true;
+	public void removeSection(Section s, int id) throws NullPointerException, IndexOutOfBoundsException {
+		if (s == null) throw new NullPointerException();
 		Section subSection = s.getNthSection(id);
-		if (subSection == null) return true;
-		if (s.removeSection(id)) return true;
+		s.removeSection(id);
 
 		//remove ids recursivamente:
 		Iterator<Section> it = subSection.getPrefixIterator();
@@ -101,8 +89,6 @@ public final class Document extends Section implements Serializable {
 		it=null;
 		subSection=null;
 		System.gc();*/
-
-		return false;
 	}
 
 	public int getIdsCount() {
