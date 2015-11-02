@@ -9,7 +9,7 @@ public abstract class Element implements Serializable {
 	private int length;
 	private Element parent;
 
-	public Element(Element parent) {
+	protected Element(Element parent) {
 		id = null;
 		length = 0;
 		this.parent = parent;

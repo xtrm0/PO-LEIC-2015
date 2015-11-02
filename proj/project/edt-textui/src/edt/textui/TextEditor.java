@@ -1,4 +1,4 @@
-/** @version $Id: TextEditor.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: TextEditor.java,v 1.7 2015/11/01 23:02:59 ist181861 Exp $ */
 package edt.textui;
 
 import static ist.po.ui.Dialog.IO;

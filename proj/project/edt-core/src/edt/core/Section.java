@@ -11,7 +11,7 @@ public class Section extends Element implements Serializable{
 	private List<Paragraph> subParagraphs;
 	private List<Section> subSections;
 
-	public Section(Element parent) {
+	protected Section(Element parent) {
 		super(parent);
 		title = "";
 		subParagraphs = new ArrayList<Paragraph>(); // TODO: isto tem delete
@@ -51,31 +51,40 @@ public class Section extends Element implements Serializable{
 	}
 
 	public void setTitle(String title) {
+		if (title == null); //TODO: throw
 		this.title = new String(title);
 		updateLength();
 	}
 
+	//TODO: catch null string and throw
 	public boolean insertSection(String title, int n) {
-		if (subSections.size() < n || n < 0) return true;
+		if (subSections.size() < n || n < 0) return true; //TODO: throw the right kind of exception
 		Section x = new Section(this);
+		try {
+			x.setTitle(title);
+		} catch (Exception e) {//TODO: fix this to throw the right exception
+			throw e;
+		}
 		subSections.add(n, x);
-		x.setTitle(title);
 		return false;
 	}
 
 	public boolean insertParagraph(String text, int n) {
-		if (subParagraphs.size() < n || n < 0) return true;
+		if (subParagraphs.size() < n || n < 0) return true; //TODO: throw the right kind of exception
 		Paragraph x = new Paragraph(this);
+		try {
+			x.setText(text);
+		} catch (Exception e) { //TODO: fix this to throw the right exception
+			throw e;
+		}
 		subParagraphs.add(n, x);
-		x.setText(text);
 		return false;
 	}
 
-	public boolean removeParagraph(int n) {
-		//Garante que é uma operação válida:
+	protected boolean removeParagraph(int n) {
+		//Garante que é uma operação válida: TODO: we should do this somewhere?
 		if (subParagraphs.size() <= n || n < 0) return true;
 		Paragraph p = subParagraphs.get(n);
-		if (p==null) return true;
 
 		//atualiza lenght:
 		notifyLength(-p.getLength());
@@ -85,11 +94,10 @@ public class Section extends Element implements Serializable{
 		return false;
 	}
 
-	public boolean removeSection(int n) {
-		//Garante que é uma operação válida:
+	protected boolean removeSection(int n) {
+		//Garante que é uma operação válida: TODO: we should do this somewhere?
 		if (subSections.size() <= n || n < 0) return true;
 		Section s = subSections.get(n);
-		if (s == null) return true;
 
 		//Atualiza length:
 		notifyLength(-s.getLength());
@@ -125,6 +133,7 @@ public class Section extends Element implements Serializable{
 	}
 }
 
+//XXX:2: Change this to be a private class
 class SectionPrefixRecursiveIterator implements Iterator<Section> {
 	Section rootSection;
 	Stack<Integer> idStack;
@@ -172,6 +181,8 @@ class SectionPrefixRecursiveIterator implements Iterator<Section> {
 	}
 }
 
+
+//MAYBE: remove this class at all?
 class SectionDirectChildIterator implements Iterator<Section> {
 	Section rootSection;
 	int n;

@@ -35,7 +35,8 @@ public final class DocumentWorker {
     dirtyBit = true;
 	}
 
-	public void loadDocument(File path) throws IOException, ClassNotFoundException {
+	public void loadDocument(File path) throws IOException, ClassNotFoundException, IllegalArgumentException {
+    if (path == null) throw new IllegalArgumentException("Null is not a valid File");
     FileInputStream inFileStream = new FileInputStream(path);
     ObjectInputStream in = new ObjectInputStream(inFileStream);
     Document tmpDoc = (Document) in.readObject(); //Separamos esta linha para garantir strong exception safety
@@ -48,9 +49,12 @@ public final class DocumentWorker {
 //XXX: check if saving was sucessfull
 //XXX: check if timestamp on disk differs
 //XXX: ask teacher how are we suposed to check wheter we should write the file or not
-	public void save() throws IOException {
+	public void save() throws IOException, IllegalArgumentException {
     if (dirtyBit == false) {
       return; //TODO: Add an exception for this ?
+    }
+    if (saveLocation == null) {
+      throw new IllegalArgumentException("Null is not a valid File");
     }
     FileOutputStream outFileStream = new FileOutputStream(saveLocation);
     ObjectOutputStream out = new ObjectOutputStream(outFileStream);
@@ -64,14 +68,14 @@ public final class DocumentWorker {
     1) Use the same code twice
     2) Use a try-catch and on the catch do a rollback and throw back
 */
-	public void save(File path) throws IOException {
+	public void save(File path) throws IOException, IllegalArgumentException {
     boolean oldDirtyBit = dirtyBit;
     File oldPath = saveLocation;
     saveLocation = path;
     dirtyBit = true;
     try {
       save();
-    } catch (IOException e) {
+    } catch (IOException|IllegalArgumentException e) {
       saveLocation = oldPath;
       dirtyBit = oldDirtyBit;
       throw e;

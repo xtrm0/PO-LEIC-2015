@@ -2,15 +2,15 @@ package edt.core;
 
 import java.io.Serializable;
 
-public class Paragraph extends Element implements Serializable {
+public final class Paragraph extends Element implements Serializable {
 	private String text;
 
-	public Paragraph(Element parent) {
+	Paragraph(Element parent) {
 		super(parent);
 		this.setText("");
 	}
 
-	public Paragraph(Element parent, String text) {
+	Paragraph(Element parent, String text) {
 		super(parent);
 		this.setText(new String(text));
 	}
@@ -21,6 +21,7 @@ public class Paragraph extends Element implements Serializable {
 	}
 
 	public void setText(String text) {
+		if (text==null); //TODO: throw
 		this.text = new String(text);
 		this.updateLength();
 	}

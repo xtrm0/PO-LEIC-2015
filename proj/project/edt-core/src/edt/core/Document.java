@@ -26,7 +26,7 @@ public final class Document extends Section implements Serializable {
 	}
 
 	public boolean addAuthor(String name, String email) {
-		//YYYY: name and email validation?
+		//TODO: name and email validation
 		Author author = new Author(name,email);
 		if (!authorsNamesUsed.add(author.getName())) {
 			return true;
@@ -41,14 +41,18 @@ public final class Document extends Section implements Serializable {
 
 	/*Classes relacionadas com o controller de Id's: */
 	public Element getElementById(String id) {
+		//TODO: id validation throw
 		return elementIds.get(id);
 	}
 
 	/*
 	 * Adds a <id,node> pair to the map. Returns the previous node with that id,
 	 * or null if there was none.
+	 * TODO: This should throw
 	 */
 	public Element addElementId(String id, Element el) {
+		//TODO: add validation
+		if (id==null) return null;// THIS SHOULD THROW
 		Element rv = getElementById(id);
 		if (rv != null) {
 			rv.setId(null);
