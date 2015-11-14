@@ -1,6 +1,8 @@
 package edt.core;
 
-public final class Author {
+import java.io.Serializable;
+
+public final class Author implements Comparable<Author>, Serializable {
 	private final String name;
 	private final String contact;
 
@@ -16,5 +18,9 @@ public final class Author {
 
 	public String getContact() {
 		return contact;
+	}
+
+	public int compareTo(Author o) {
+		return this.name.compareTo(o.name);
 	}
 }

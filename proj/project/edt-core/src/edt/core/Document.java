@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Collections;
 
 public final class Document extends Section implements Serializable {
 	private Set<String> authorsNamesUsed;
@@ -30,6 +31,7 @@ public final class Document extends Section implements Serializable {
 	}
 
 	public ArrayList<Author> getAuthors() {
+		Collections.sort(authors);
 		return authors;
 	}
 

@@ -1,4 +1,4 @@
-/** @version $Id: Save.java,v 1.8 2015/11/01 23:02:59 ist181861 Exp $ */
+/** @version $Id: Save.java,v 1.9 2015/11/12 05:41:40 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -25,7 +25,7 @@ public class Save extends Command<DocumentWorker> {
 
 		try {
 			if (_receiver.issetFilename()) {
-				inp = IO.readString(Message.saveAs());
+				inp = IO.readString(Message.newSaveAs());
 				f = new File(inp);
 				_receiver.save(f);
 			} else {

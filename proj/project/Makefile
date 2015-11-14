@@ -14,4 +14,8 @@ run:	all
 	(cd edt-textui; make $(MFLAGS) run)
 
 testrun:	all
-	(cd edt-textui; make $(MFLAGS) testrun)
+	(cd tests; make $(MFLAGS))
+
+runwithimport: all
+	(cd edt-textui; make $(MFLAGS) runwithimport)
+

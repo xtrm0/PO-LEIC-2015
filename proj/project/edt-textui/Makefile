@@ -16,3 +16,6 @@ run: all
 
 testrun: all
 		(cd src; java -cp $(JAVADIR)/po-uilib.jar:$(JAVADIR)/edt-support.jar:../../edt-core/edt-core.jar:../../edt-textui/edt-textui.jar edt.textui.TextEditor < ../../tests/test.in.1)
+
+runwithimport:
+	(cd src; java -Dimport=test.import -cp $(JAVADIR)/po-uilib.jar:$(JAVADIR)/edt-support.jar:../../edt-core/edt-core.jar:../../edt-textui/edt-textui.jar edt.textui.TextEditor)

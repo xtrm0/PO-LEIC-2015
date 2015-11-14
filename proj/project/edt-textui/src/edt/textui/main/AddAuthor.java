@@ -1,4 +1,4 @@
-/** @version $Id: AddAuthor.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: AddAuthor.java,v 1.7 2015/11/03 23:04:40 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;

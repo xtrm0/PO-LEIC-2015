@@ -8,6 +8,10 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.nio.charset.Charset;
 
 public final class DocumentWorker {
   private Document currDoc;
@@ -21,6 +25,43 @@ public final class DocumentWorker {
     dirtyBit = true;
 	}
 
+  public DocumentWorker(String datafile) {
+    this();
+    try {
+      String tmp;
+      InputStream fis = new FileInputStream(datafile);
+      InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+      BufferedReader br = new BufferedReader(isr);
+      Section lastSection = currDoc;
+      tmp = br.readLine();
+      currDoc.setTitle(tmp);
+      tmp = br.readLine();
+      String[] tmp2;
+      for (String authorStr : tmp.split("\\|")) {
+        tmp2 = authorStr.split("/");
+        currDoc.addAuthor(tmp2[0], tmp2[1]);
+      }
+      while ((tmp = br.readLine()) != null) {
+        tmp2 = tmp.split("\\|");
+        if (tmp2[0].equals("SECTION")) {
+          currDoc.insertSection(tmp2[2], currDoc.getSectionsCount());
+          lastSection = currDoc.getNthSection(currDoc.getSectionsCount()-1);
+          currDoc.addElementId(tmp2[1], lastSection);
+        } else if (tmp2[0].equals("PARAGRAPH")) {
+          lastSection.insertParagraph(tmp2[1], lastSection.getParagraphsCount());
+        } else {
+          throw new ClassNotFoundException("First token must be either SECTION or PARAGRAPH!");
+        }
+      }
+    } catch (Exception ex) { //caso o documento nao seja valido
+      //System.out.println("catn laod shti");
+      currDoc = new Document();
+      saveLocation = null;
+      dirtyBit = true;
+      //System.out.println(ex);
+    }
+  }
+
 	public void newDocument() {
 		currDoc = new Document();
     saveLocation = null;
@@ -29,6 +70,7 @@ public final class DocumentWorker {
 
 	public void loadDocument(File path) throws IOException, ClassNotFoundException, IllegalArgumentException {
     if (path == null) throw new IllegalArgumentException("Null is not a valid File");
+    if (!path.exists() || path.isDirectory()) throw new IOException("File not found!");
     FileInputStream inFileStream = new FileInputStream(path);
     ObjectInputStream in = new ObjectInputStream(inFileStream);
     Document tmpDoc = (Document) in.readObject(); //Separamos esta linha para garantir strong exception safety
@@ -45,6 +87,8 @@ public final class DocumentWorker {
     if (saveLocation == null) {
       throw new IllegalArgumentException("Null is not a valid File");
     }
+    saveLocation.setWritable(true,false);
+    saveLocation.setReadable(true,false);
     FileOutputStream outFileStream = new FileOutputStream(saveLocation);
     ObjectOutputStream out = new ObjectOutputStream(outFileStream);
     out.writeObject(currDoc);

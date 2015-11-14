@@ -1,4 +1,4 @@
-/** @version $Id: Open.java,v 1.7 2015/11/01 23:02:59 ist181861 Exp $ */
+/** @version $Id: Open.java,v 1.9 2015/11/12 05:41:40 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -28,6 +28,7 @@ public class Open extends Command<DocumentWorker> {
 			IO.println(Message.fileNotFound(inp));
 		} catch (ClassNotFoundException|IllegalArgumentException e) {
 			//Dont know what to do
+			IO.println("Other *stuff* happened");
 		}
 	}
 

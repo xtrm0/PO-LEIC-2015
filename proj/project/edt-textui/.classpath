@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry excluding="CVS/|edt/CVS/|edt/textui/CVS/|edt/textui/main/CVS/|edt/textui/section/CVS/" kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/usr/share/java/edt-support.jar"/>
-	<classpathentry kind="lib" path="/usr/share/java/po-uilib.jar"/>
-	<classpathentry kind="lib" path="/home/xtrm0/x/school/PO/proj/project/edt-core/edt-core.jar"/>
-	<classpathentry kind="output" path="src"/>
-</classpath>

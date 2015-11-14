@@ -1,4 +1,4 @@
-/** @version $Id: ChangeTitle.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: ChangeTitle.java,v 1.6 2015/11/03 23:04:40 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
