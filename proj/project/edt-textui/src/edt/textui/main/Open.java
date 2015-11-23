@@ -1,4 +1,4 @@
-/** @version $Id: Open.java,v 1.9 2015/11/12 05:41:40 ist181861 Exp $ */
+/** @version $Id: Open.java,v 1.10 2015/11/14 18:56:11 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
