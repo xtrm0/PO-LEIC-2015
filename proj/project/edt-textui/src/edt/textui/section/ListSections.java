@@ -1,4 +1,4 @@
-/** @version $Id: ListSections.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: ListSections.java,v 1.6 2015/11/24 00:15:04 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -23,7 +23,8 @@ public class ListSections extends SectionCommand {
 		it.next();
 		while (it.hasNext()) {
 			Section s = it.next();
-			IO.println(Message.sectionIndexEntry(s.getId(), s.getTitle()));
+			String sid = s.getId();
+			IO.println(Message.sectionIndexEntry(sid!=null ? sid : "", s.getTitle()));
 		}
 	}
 }

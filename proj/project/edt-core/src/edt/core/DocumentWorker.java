@@ -46,7 +46,7 @@ public final class DocumentWorker {
         if (tmp2[0].equals("SECTION")) {
           currDoc.insertSection(tmp2[2], currDoc.getSectionsCount());
           lastSection = currDoc.getNthSection(currDoc.getSectionsCount()-1);
-          if (!tmp2[1].equals("")) {
+          if (tmp2[1]!=null && !tmp2[1].equals("")) {
             currDoc.addElementId(tmp2[1], lastSection);
           }
         } else if (tmp2[0].equals("PARAGRAPH")) {

@@ -47,6 +47,9 @@ public final class Document extends Section implements Serializable {
 	 */
 	public Element addElementId(String id, Element el) throws NullPointerException {
 		if (id==null || el==null) throw new NullPointerException();
+		if (el.getId() != null) {
+			elementIds.remove(el.getId());
+		}
 		Element rv = getElementById(id);
 		if (rv != null) {
 			rv.setId(null);

@@ -1,4 +1,4 @@
-/** @version $Id: ShowTextElement.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: ShowTextElement.java,v 1.7 2015/11/24 00:15:04 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Element;
@@ -31,7 +31,6 @@ public class ShowTextElement extends Command<DocumentWorker> {
 			return;
 		} else if (target instanceof Section) {
 			Iterator<Section> it = ((Section) target).getPrefixIterator();
-			it.next();
 			while (it.hasNext()) {
 				Section s = it.next();
 				String currId = s.getId();

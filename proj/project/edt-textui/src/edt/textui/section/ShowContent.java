@@ -1,4 +1,4 @@
-/** @version $Id: ShowContent.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: ShowContent.java,v 1.6 2015/11/24 00:15:04 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -23,7 +23,11 @@ public class ShowContent extends SectionCommand {
 		while (it.hasNext()) {
 			Section s = it.next();
 			String currId = s.getId();
-			IO.println(Message.sectionIndexEntry(currId != null ? currId : "", s.getTitle()));
+			if (s == docW.getCurrentDocument()) { //queremos mesmo o == de java, para garantir que o documento atual
+				IO.println("{" + s.getTitle() + "}");
+			} else {
+				IO.println(Message.sectionIndexEntry(currId != null ? currId : "", s.getTitle()));
+			}
 			for (int j = 0; j < s.getParagraphsCount(); j++) {
 				IO.println(s.getNthParagraph(j).getText());
 			}
