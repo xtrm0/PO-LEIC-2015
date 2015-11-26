@@ -1,8 +1,8 @@
-/** @version $Id: Save.java,v 1.9 2015/11/12 05:41:40 ist181861 Exp $ */
+/** @version $Id: Save.java,v 1.10 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.Command;
 import ist.po.ui.DialogException;
@@ -13,8 +13,8 @@ import java.io.IOException;
 /**
  * Save to file under current name (if unnamed, query for name).
  */
-public class Save extends Command<DocumentWorker> {
-	public Save(DocumentWorker w) {
+public class Save extends Command<DocumentEditor> {
+	public Save(DocumentEditor w) {
 		super(MenuEntry.SAVE, w);
 	}
 

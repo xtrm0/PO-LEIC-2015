@@ -43,4 +43,6 @@ public abstract class Element implements Serializable {
 	public Element getParent() {
 		return parent;
 	}
+
+	public abstract void accept(ElementVisitor visitor);
 }

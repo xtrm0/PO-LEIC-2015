@@ -1,8 +1,8 @@
-/** @version $Id: SectionCommand.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: SectionCommand.java,v 1.7 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import ist.po.ui.Command;
 
 /**
@@ -10,9 +10,9 @@ import ist.po.ui.Command;
  */
 public abstract class SectionCommand extends Command<Section> {
 
-	DocumentWorker docW;
+	DocumentEditor docW;
 
-	public SectionCommand(String title, Section receiver, DocumentWorker w) {
+	public SectionCommand(String title, Section receiver, DocumentEditor w) {
 		super(title, receiver);
 		docW = w;
 	}

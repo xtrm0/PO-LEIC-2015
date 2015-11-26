@@ -1,8 +1,8 @@
-/** @version $Id: AddAuthor.java,v 1.7 2015/11/03 23:04:40 ist181861 Exp $ */
+/** @version $Id: AddAuthor.java,v 1.8 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.Command;
 import ist.po.ui.DialogException;
@@ -12,8 +12,8 @@ import java.io.IOException;
 /**
  * §2.1.3.
  */
-public class AddAuthor extends Command<DocumentWorker> {
-	public AddAuthor(DocumentWorker w) {
+public class AddAuthor extends Command<DocumentEditor> {
+	public AddAuthor(DocumentEditor w) {
 		super(MenuEntry.ADD_AUTHOR, w);
 	}
 

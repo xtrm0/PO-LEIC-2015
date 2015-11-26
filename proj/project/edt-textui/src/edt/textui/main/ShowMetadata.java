@@ -1,9 +1,9 @@
-/** @version $Id: ShowMetadata.java,v 1.4 2015/10/22 21:20:48 ist181861 Exp $ */
+/** @version $Id: ShowMetadata.java,v 1.5 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Author;
 import edt.core.Document;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.Command;
 import ist.po.ui.DialogException;
@@ -13,8 +13,8 @@ import java.io.IOException;
 /**
  * §2.1.2.
  */
-public class ShowMetadata extends Command<DocumentWorker> {
-	public ShowMetadata(DocumentWorker w) {
+public class ShowMetadata extends Command<DocumentEditor> {
+	public ShowMetadata(DocumentEditor w) {
 		super(MenuEntry.SHOW_METADATA, w);
 	}
 

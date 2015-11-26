@@ -1,0 +1,21 @@
+Faz os mesmos testes que X0-001, mas fazendo sempre import a partir de um ficheiro, em vez de load
+
+Este teste gera uma arvore de sections assim:
+r (Document)
+├─ A
+│  ├─ B
+│  │  ├─ C
+│  │  └─ D
+│  ├─ E
+│  └─ F
+|     └─ G
+│        ├─ H
+│        └─ I
+├─ J
+└─ K
+   └─ L
+
+Subtestes:
+1) Testa insercao
+2) Testa impressao de diferentes subarvores (edt.core.textui)
+3) Testa impressao pelo edt.core.main

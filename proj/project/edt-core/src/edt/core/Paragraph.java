@@ -28,4 +28,8 @@ public final class Paragraph extends Element implements Serializable {
 	public String getText() {
 		return text;
 	}
+
+	public void accept(ElementVisitor visitor) {
+		visitor.visit(this);
+	}
 }

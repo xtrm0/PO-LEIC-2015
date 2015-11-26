@@ -174,35 +174,18 @@ public class Section extends Element implements Serializable{
 	}
 
 	/**
-	 * Runs an automatic recursive operator on all the nodes starting on the current section
-	 * @param op The operator
-	 */
-	public void runAutoOperator(SectionOperator op) {
-		SectionPrefixRecursiveIterator it = new SectionPrefixRecursiveIterator(op);
-		while(it.hasNext()) it.next();
-	}
-
-
-	/**
 	 * A recursive section iterator
 	 * @author xtrm0
 	 */
 	class SectionPrefixRecursiveIterator implements Iterator<Section> {
 		Section rootSection;
 		Stack<Integer> idStack;
-		SectionOperator op;
 		boolean ended;
 
 		public SectionPrefixRecursiveIterator() {
 			rootSection = Section.this;
 			idStack = new Stack<Integer>();
 			idStack.push(0);
-			op=null;
-		}
-
-		public SectionPrefixRecursiveIterator(SectionOperator op) {
-			this();
-			this.op = op;
 		}
 
 		@Override
@@ -214,10 +197,8 @@ public class Section extends Element implements Serializable{
 		public Section next() throws NoSuchElementException{
 			if (!hasNext())
 				throw new NoSuchElementException();
-			if (op!=null) op.onCall(rootSection);
 			Section ret = rootSection;
 			while (rootSection.getSectionsCount() == idStack.peek()) {
-				if (op!=null) op.onRet(rootSection);
 				rootSection = (Section) rootSection.getParent();
 				idStack.pop();
 				if (idStack.isEmpty()) {
@@ -232,5 +213,9 @@ public class Section extends Element implements Serializable{
 			rootSection = rootSection.getNthSection(nx);
 			return ret;
 		}
+	}
+
+	public void accept(ElementVisitor visitor) {
+		visitor.visit(this);
 	}
 }

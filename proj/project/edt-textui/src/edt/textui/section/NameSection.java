@@ -1,9 +1,9 @@
-/** @version $Id: NameSection.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: NameSection.java,v 1.7 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
 import edt.core.Document;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
  * §2.2.6.
  */
 public class NameSection extends SectionCommand {
-	public NameSection(Section s, DocumentWorker w) {
+	public NameSection(Section s, DocumentEditor w) {
 		super(MenuEntry.NAME_SECTION, s, w);
 	}
 

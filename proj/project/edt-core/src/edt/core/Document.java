@@ -99,4 +99,8 @@ public final class Document extends Section implements Serializable {
 	public int getIdsCount() {
 		return elementIds.size();
 	}
+
+	public void accept(ElementVisitor visitor) {
+		visitor.visit(this);
+	}
 }

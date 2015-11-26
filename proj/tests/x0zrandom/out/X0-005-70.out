@@ -1,0 +1,1811 @@
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: [] {}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Identificador único: A secção '5' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Nova secção activa: '0'.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+[] {}
+[] {7}
+[] {4}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Identificador único: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: {}
+[] {}
+[] {7}
+[] {4}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Título: 
+Autor: 3/3
+Secções de topo: 3
+Dimensão do documento (bytes): 2
+Identificadores únicos: 0
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '2' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '7' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: {}
+[] {}
+[] {7}
+[] {4}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {}
+[] {}
+[] {7}
+[] {4}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Nome do autor: Email do autor: O autor '3' já existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro a abrir: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '7' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '5' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Identificador único: A secção '6' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: A secção '7' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: A secção '2' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: Identificador único: A secção '7' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {0}
+
+6
+
+1
+[] {2}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: A secção '7' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Identificador único: A secção '2' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro a abrir: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '0' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Título: 
+Secções de topo: 0
+Dimensão do documento (bytes): 0
+Identificadores únicos: 0
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: A secção '3' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: A secção '1' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+[] {7}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+[] {7}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '0' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Identificador do elemento de texto: O elemento de texto '4' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro a abrir: O ficheiro '' não existe.
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número do parágrafo: Número inválido: java.lang.NumberFormatException: For input string: ""
+Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Identificador único: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: A secção '4' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Identificador único: A secção '2' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '4' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {}
+8
+6
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: A secção '7' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+8
+6
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Identificador único: A secção '1' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: A secção '7' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {}
+8
+6
+5
+6
+[] {6}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '6' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '5' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Número do parágrafo: Número inválido: java.lang.NumberFormatException: For input string: ""
+Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {8}
+8
+0
+6
+5
+6
+[] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: [] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: {8}
+8
+0
+6
+5
+6
+[] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número do parágrafo: Número inválido: java.lang.NumberFormatException: For input string: ""
+Número do parágrafo: Conteúdo do parágrafo: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: [] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Identificador da secção: A secção '8' não existe.
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: [] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {8}
+1
+8
+0
+6
+5
+6
+[] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: [] {6}
+[] {}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Identificador da secção: Título da secção: Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: {8}
+1
+8
+0
+6
+5
+6
+[] {6}
+[] {}
+[] {8}
+[] {8}
+Menu de Edição
+1 - Mudar título
+2 - Listar secções
+3 - Mostrar conteúdo
+4 - Seleccionar secção
+5 - Inserir secção
+6 - Nomear secção
+7 - Remover secção
+8 - Inserir parágrafo
+9 - Nomear parágrafo
+10 - Alterar parágrafo
+11 - Remover parágrafo
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Nome do autor: Email do autor: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: {8}
+[] {6}
+[] {}
+[] {8}
+[] {8}
+Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro a abrir: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Número inválido: java.lang.NumberFormatException: For input string: ""
+Escolha uma opção: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: Ficheiro a abrir: Menu Principal
+1 - Novo
+2 - Abrir
+3 - Guardar
+4 - Listar meta-informação
+5 - Adicionar autor
+6 - Listar secções
+7 - Mostrar elemento de texto
+8 - Editar
+0 - Sair
+Escolha uma opção: 

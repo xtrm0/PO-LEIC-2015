@@ -1,8 +1,8 @@
-/** @version $Id: ShowIndex.java,v 1.5 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: ShowIndex.java,v 1.6 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import edt.core.Section;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.Command;
@@ -14,8 +14,8 @@ import java.util.Iterator;
 /**
  * §2.1.4.
  */
-public class ShowIndex extends Command<DocumentWorker> {
-	public ShowIndex(DocumentWorker w) {
+public class ShowIndex extends Command<DocumentEditor> {
+	public ShowIndex(DocumentEditor w) {
 		super(MenuEntry.SHOW_INDEX, w);
 	}
 

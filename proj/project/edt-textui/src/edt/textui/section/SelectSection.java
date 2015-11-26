@@ -1,8 +1,8 @@
-/** @version $Id: SelectSection.java,v 1.6 2015/11/01 21:42:21 ist181861 Exp $ */
+/** @version $Id: SelectSection.java,v 1.7 2015/11/26 03:44:16 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
-import edt.core.DocumentWorker;
+import edt.core.DocumentEditor;
 import static ist.po.ui.Dialog.IO;
 import ist.po.ui.DialogException;
 
@@ -12,7 +12,7 @@ import java.io.IOException;
  * §2.2.4.
  */
 public class SelectSection extends SectionCommand {
-	public SelectSection(Section s, DocumentWorker w) {
+	public SelectSection(Section s, DocumentEditor w) {
 		super(MenuEntry.SELECT_SECTION, s, w);
 	}
 
