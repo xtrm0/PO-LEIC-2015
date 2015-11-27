@@ -12,7 +12,7 @@ import ist.po.ui.DialogException;
 import java.util.Iterator;
 import java.io.IOException;
 
-public class ShowerEVisitor implements ElementVisitor {
+public class ShowerElementVisitor implements ElementVisitor {
   public void visit(Paragraph p) {
     if (p == null) return;
     IO.println(p.getText());

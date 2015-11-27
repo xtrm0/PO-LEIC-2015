@@ -2,7 +2,7 @@
 JAVADIR=/usr/share/java
 PROJDIR=/home/xtrm0/poproj/project/
 TESTDIR=/home/xtrm0/poproj/project/tests/x0tests
-TEST=X0-002-01
+TEST=X0-001-01
 cd $TESTDIR/out
 pwd
 java -Dimport="$TESTDIR/$TEST.import" -cp "$JAVADIR/po-uilib.jar:$JAVADIR/edt-support.jar:$PROJDIR/edt-core/edt-core.jar:$PROJDIR/edt-textui/edt-textui.jar"  edt.textui.TextEditor

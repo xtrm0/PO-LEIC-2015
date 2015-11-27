@@ -1,2 +1,6 @@
-Corrigir section count
-Gerar testes
+Mudar file para string (nao se pode usar string porque o DM e um FDP)
+Mudar o containter dos authors para algo tipo o set do c++
+O visitor tem de retornar um array de strings, porque o DM e autista
+Decidir o que fazer com a string vazia (pvvmente o mesmo que o tomas)
+Adicionar try/catch a todos os inputs, e preciso apanhar IOException e RuntimeEOFException
+Decidir o que fazer quando se apanha um IOException

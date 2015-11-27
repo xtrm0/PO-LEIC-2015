@@ -160,59 +160,10 @@ public class Section extends Element implements Serializable{
 	}
 
 	/**
-	 * @return a recursive section iterator starting on this section
-	 */
-	public Iterator<Section> getPrefixIterator() {
-		return new SectionPrefixRecursiveIterator();
-	}
-
-	/**
 	 * @return a iterator to the direct child sections of the current sections
 	 */
 	public Iterator<Section> getDirectIterator() {
 		return subSections.iterator();
-	}
-
-	/**
-	 * A recursive section iterator
-	 * @author xtrm0
-	 */
-	class SectionPrefixRecursiveIterator implements Iterator<Section> {
-		Section rootSection;
-		Stack<Integer> idStack;
-		boolean ended;
-
-		public SectionPrefixRecursiveIterator() {
-			rootSection = Section.this;
-			idStack = new Stack<Integer>();
-			idStack.push(0);
-		}
-
-		@Override
-		public boolean hasNext() {
-			return !ended;
-		}
-
-		@Override
-		public Section next() throws NoSuchElementException{
-			if (!hasNext())
-				throw new NoSuchElementException();
-			Section ret = rootSection;
-			while (rootSection.getSectionsCount() == idStack.peek()) {
-				rootSection = (Section) rootSection.getParent();
-				idStack.pop();
-				if (idStack.isEmpty()) {
-					ended = true;
-					return ret;
-				}
-			}
-			int nx = idStack.peek();
-			idStack.pop();
-			idStack.push(nx+1);
-			idStack.push(0);
-			rootSection = rootSection.getNthSection(nx);
-			return ret;
-		}
 	}
 
 	public void accept(ElementVisitor visitor) {

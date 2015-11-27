@@ -73,22 +73,28 @@ public final class Document extends Section implements Serializable {
 		System.gc();*/
 	}
 
+
+	private void _removeSectionIdsRecursive(Section s) {
+		elementIds.remove(s.getId());
+
+		Iterator<Paragraph> pit = s.getParagraphIterator();
+		while (pit.hasNext()) {
+			Paragraph p = pit.next();
+			elementIds.remove(p.getId());
+		}
+
+		Iterator<Section> sit = s.getDirectIterator();
+		while (sit.hasNext()) {
+			Section sub = sit.next();
+			_removeSectionIdsRecursive(sub);
+		}
+	}
+
 	public void removeSection(Section s, int id) throws NullPointerException, IndexOutOfBoundsException {
 		if (s == null) throw new NullPointerException();
 		Section subSection = s.getNthSection(id);
 		s.removeSection(id);
-
-		//remove ids recursivamente:
-		Iterator<Section> it = subSection.getPrefixIterator();
-		while (it.hasNext()) {
-			Section target = it.next();
-			Iterator<Paragraph> pit = target.getParagraphIterator();
-			while (pit.hasNext()) {
-				Paragraph p = pit.next();
-				elementIds.remove(p.getId());
-			}
-			elementIds.remove(target.getId());
-		}
+		_removeSectionIdsRecursive(subSection);
 
 		/*MAYBE:?:
 		it=null;
