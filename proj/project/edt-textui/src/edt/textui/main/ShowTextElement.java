@@ -1,4 +1,4 @@
-/** @version $Id: ShowTextElement.java,v 1.9 2015/11/26 20:47:01 ist181861 Exp $ */
+/** @version $Id: ShowTextElement.java,v 1.10 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Element;
@@ -30,7 +30,11 @@ public class ShowTextElement extends Command<DocumentEditor> {
 			IO.println(Message.noSuchTextElement(id));
 			return;
 		} else {
-			target.accept(new ShowerElementVisitor());
+			ShowerElementVisitor vis = new ShowerElementVisitor();
+			target.accept(vis);
+			for (String s: vis.getReturn()) {
+				IO.println(s);
+			}
 		}
 	}
 }

@@ -2,7 +2,7 @@ package edt.core;
 
 import java.io.Serializable;
 
-public final class Paragraph extends Element implements Serializable {
+public class Paragraph extends Element implements Serializable {
 	private String text;
 
 	Paragraph(Element parent) {

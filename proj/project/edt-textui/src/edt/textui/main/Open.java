@@ -1,4 +1,4 @@
-/** @version $Id: Open.java,v 1.12 2015/11/26 20:47:01 ist181861 Exp $ */
+/** @version $Id: Open.java,v 1.13 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -21,9 +21,8 @@ public class Open extends Command<DocumentEditor> {
 	@Override
 	public final void execute() throws DialogException, IOException {
 		String inp = IO.readString(Message.openFile());
-		File f = new File(inp);
 		try {
-			_receiver.loadDocument(f);
+			_receiver.loadDocument(inp);
 		} catch (IOException e) {
 			IO.println(Message.fileNotFound(inp));
 		} catch (ClassNotFoundException|IllegalArgumentException e) {

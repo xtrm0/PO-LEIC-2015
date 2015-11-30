@@ -1,4 +1,4 @@
-/** @version $Id: ShowContent.java,v 1.8 2015/11/26 20:47:01 ist181861 Exp $ */
+/** @version $Id: ShowContent.java,v 1.9 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -19,6 +19,10 @@ public class ShowContent extends SectionCommand {
 
 	@Override
 	public final void execute() throws DialogException, IOException {
-		_receiver.accept(new ShowerElementVisitor());
+		ShowerElementVisitor vis = new ShowerElementVisitor();
+		_receiver.accept(vis);
+		for (String s : vis.getReturn()) {
+			IO.println(s);
+		}
 	}
 }

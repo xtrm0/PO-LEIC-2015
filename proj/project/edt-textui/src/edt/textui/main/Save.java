@@ -1,4 +1,4 @@
-/** @version $Id: Save.java,v 1.10 2015/11/26 03:44:16 ist181861 Exp $ */
+/** @version $Id: Save.java,v 1.11 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.main;
 
 import edt.core.Document;
@@ -21,13 +21,10 @@ public class Save extends Command<DocumentEditor> {
 	@Override
 	public final void execute() throws DialogException, IOException {
 		String inp = null;
-		File f = null;
-
 		try {
 			if (_receiver.issetFilename()) {
 				inp = IO.readString(Message.newSaveAs());
-				f = new File(inp);
-				_receiver.save(f);
+				_receiver.save(inp);
 			} else {
 				_receiver.save();
 			}

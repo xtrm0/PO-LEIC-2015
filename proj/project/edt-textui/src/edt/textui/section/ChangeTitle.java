@@ -1,4 +1,4 @@
-/** @version $Id: ChangeTitle.java,v 1.7 2015/11/26 03:44:16 ist181861 Exp $ */
+/** @version $Id: ChangeTitle.java,v 1.8 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -19,7 +19,7 @@ public class ChangeTitle extends SectionCommand {
 	@Override
 	public final void execute() throws DialogException, IOException {
 		String inp = IO.readString(Message.requestSectionTitle());
-		_receiver.setTitle(inp); 
+		_receiver.setTitle(inp);
 		docW.setDirtyBit();
 	}
 }

@@ -11,8 +11,11 @@ import ist.po.ui.DialogException;
 
 import java.util.Iterator;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class ShowerSectionVisitor implements ElementVisitor {
+public final class ShowerSectionVisitor implements ElementVisitor {
+  private List<String> ret = new ArrayList<String>();
   public void visit(Paragraph p){;}
   public void visit(Document d) {
     visit((Section) d);
@@ -25,5 +28,8 @@ public class ShowerSectionVisitor implements ElementVisitor {
       IO.println(Message.sectionIndexEntry(currId != null ? currId : "", target.getTitle()));
       target.accept(this);
     }
+  }
+  public List<String> getReturn() {
+    return ret;
   }
 }

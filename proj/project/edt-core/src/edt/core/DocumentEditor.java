@@ -70,8 +70,9 @@ public final class DocumentEditor {
     dirtyBit = true;
 	}
 
-	public void loadDocument(File path) throws IOException, ClassNotFoundException, IllegalArgumentException {
-    if (path == null) throw new IllegalArgumentException("Null is not a valid File");
+	public void loadDocument(String f) throws IOException, ClassNotFoundException, IllegalArgumentException {
+    if (f== null) throw new IllegalArgumentException("Null is not a valid File path");
+    File path = new File(f);
     if (!path.exists() || path.isDirectory()) throw new IOException("File not found!");
     FileInputStream inFileStream = new FileInputStream(path);
     ObjectInputStream in = new ObjectInputStream(inFileStream);
@@ -97,9 +98,11 @@ public final class DocumentEditor {
     dirtyBit = false;
 	}
 
-	public void save(File path) throws IOException, IllegalArgumentException {
+	public void save(String f) throws IOException, IllegalArgumentException {
+    if (f== null) throw new IllegalArgumentException("Null is not a valid File path");
     boolean oldDirtyBit = dirtyBit;
     File oldPath = saveLocation;
+    File path = new File(f);
     saveLocation = path;
     dirtyBit = true;
     try {

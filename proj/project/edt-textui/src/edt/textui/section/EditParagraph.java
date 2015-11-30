@@ -1,4 +1,4 @@
-/** @version $Id: EditParagraph.java,v 1.5 2015/11/26 03:44:16 ist181861 Exp $ */
+/** @version $Id: EditParagraph.java,v 1.6 2015/11/30 23:17:08 ist181861 Exp $ */
 package edt.textui.section;
 
 import edt.core.Section;
@@ -21,6 +21,7 @@ public class EditParagraph extends SectionCommand {
 	public final void execute() throws DialogException, IOException {
 		int parId = IO.readInteger(Message.requestParagraphId());
 		String text = IO.readString(Message.requestParagraphContent());
+
 		Paragraph targetParagraph = _receiver.getNthParagraph(parId);
 		if (targetParagraph == null) {
 			IO.println(Message.noSuchParagraph(parId));
